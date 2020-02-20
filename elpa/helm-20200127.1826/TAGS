@@ -1,0 +1,2117 @@
+
+helm-adaptive.el,758
+(defgroup helm-adapt 27,929
+(defcustom helm-adaptive-history-file31,1018
+(defcustom helm-adaptive-history-length 40,1343
+(defcustom helm-adaptive-sort-by-frequent-recent-usage 45,1479
+(defvar helm-adaptive-done 62,2029
+(defvar helm-adaptive-history 66,2138
+(defconst helm-adaptive-freq-coefficient 70,2302
+(defconst helm-adaptive-recent-coefficient 71,2346
+(defun helm-adaptive-done-reset 73,2393
+(define-minor-mode helm-adaptive-mode77,2477
+(defun helm-adapt-use-adaptive-p 100,3568
+(defun helm-adaptive-store-selection 110,4109
+(defun helm-adaptive-maybe-load-history 167,7515
+(defun helm-adaptive-save-history 174,7839
+(defun helm-adaptive-sort 189,8438
+(defun helm-reset-adaptive-history 254,12125
+(defun helm-adaptive-compare 262,12457
+
+helm-adaptive.elc,180
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+(defvar helm-adaptive-done nil 18,1796
+
+helm-autoloads.el,408
+(defvar helm-adaptive-mode 12,310
+(defvar helm-comp-read-mode-line 455,13370
+(defvar helm-read-file-name-mode-line-string 457,13641
+(defvar helm-top-mode-line 460,13987
+(defvar helm-mode 760,24581
+(defalias 'helm-shell-prompts helm-shell-prompts977,31041
+(defalias 'helm-shell-prompts-all helm-shell-prompts-all979,31094
+(defvar helm-top-poll-mode 986,31264
+(defvar helm-popup-tip-mode 1051,33178
+
+helm-bookmark.el,3963
+(defgroup helm-bookmark 33,1170
+(defcustom helm-bookmark-show-location 37,1260
+(defcustom helm-bookmark-default-filtered-sources42,1388
+(defface helm-bookmark-info58,1974
+(defface helm-bookmark-w3m63,2120
+(defface helm-bookmark-gnus68,2266
+(defface helm-bookmark-man73,2389
+(defface helm-bookmark-file78,2516
+(defface helm-bookmark-file-not-found83,2644
+(defface helm-bookmark-directory88,2780
+(defface helm-bookmark-addressbook93,2913
+(defvar helm-bookmark-map99,3051
+(defclass helm-source-basic-bookmarks 110,3547
+(defvar helm-source-bookmarks118,3929
+(defun helm-bookmark-transformer 122,4060
+(defun helm-bookmark-toggle-filename-1 136,4667
+(defun helm-bookmark-toggle-filename 150,5364
+(defun helm-bookmark-jump 159,5692
+(defun helm-bookmark-jump-other-frame 165,5868
+(defun helm-bookmark-jump-other-window 171,6101
+(defvar helm-source-bookmark-set179,6288
+(defconst helm-bookmark--non-file-filename 195,6901
+(defun helm-bookmark-gnus-bookmark-p 198,7025
+(defun helm-bookmark-w3m-bookmark-p 205,7373
+(defun helm-bookmark-woman-bookmark-p 212,7717
+(defun helm-bookmark-man-bookmark-p 219,8062
+(defun helm-bookmark-woman-man-bookmark-p 226,8397
+(defun helm-bookmark-info-bookmark-p 232,8656
+(defun helm-bookmark-image-bookmark-p 237,8867
+(defun helm-bookmark-file-p 243,9088
+(defun helm-bookmark-org-file-p 251,9514
+(defun helm-bookmark-helm-find-files-p 256,9711
+(defun helm-bookmark-addressbook-p 261,9945
+(defun helm-bookmark-uncategorized-bookmark-p 269,10305
+(defun helm-bookmark-filter-setup-alist 283,11003
+(defun helm-bookmark-jump-w3m 293,11331
+(defalias 'bookmark-w3m-bookmark-jump bookmark-w3m-bookmark-jump319,12692
+(defalias 'bmkext-jump-woman bmkext-jump-woman323,12870
+(defalias 'bmkext-jump-man bmkext-jump-man324,12921
+(defalias 'bmkext-jump-w3m bmkext-jump-w3m325,12968
+(defalias 'bmkext-jump-gnus bmkext-jump-gnus326,13020
+(defalias 'bookmarkp-jump-gnus bookmarkp-jump-gnus327,13077
+(defalias 'bookmarkp-jump-w3m bookmarkp-jump-w3m328,13137
+(defalias 'bookmarkp-jump-woman bookmarkp-jump-woman329,13192
+(defalias 'bookmarkp-jump-man bookmarkp-jump-man330,13246
+(defclass helm-source-filtered-bookmarks 336,13336
+(defun helm-bookmark-w3m-setup-alist 343,13557
+(defvar helm-source-bookmark-w3m347,13717
+(defun helm-bookmark-images-setup-alist 356,14004
+(defvar helm-source-bookmark-images360,14172
+(defun helm-bookmark-man-setup-alist 369,14471
+(defvar helm-source-bookmark-man373,14637
+(defun helm-bookmark-org-setup-alist 382,14933
+(defvar helm-source-bookmark-org386,15094
+(defun helm-bookmark-gnus-setup-alist 395,15388
+(defvar helm-source-bookmark-gnus399,15551
+(defun helm-bookmark-info-setup-alist 408,15839
+(defvar helm-source-bookmark-info412,16002
+(defun helm-bookmark-local-files-setup-alist 421,16307
+(defvar helm-source-bookmark-files&dirs425,16476
+(defun helm-bookmark-helm-find-files-setup-alist 434,16811
+(defun helm-bookmark-browse-project 438,17000
+(defun helm-bookmark-run-browse-project 444,17197
+(defvar helm-bookmark-find-files-map451,17452
+(defclass helm-bookmark-override-inheritor 457,17653
+(defmethod helm--setup-source 459,17715
+(defclass helm-bookmark-find-files-class 471,18321
+(defvar helm-source-bookmark-helm-find-files475,18477
+(defun helm-bookmark-uncategorized-setup-alist 486,18926
+(defvar helm-source-bookmark-uncategorized490,19116
+(defun helm-highlight-bookmark 500,19440
+(defun helm-bookmark-edit-bookmark 597,24918
+(defun helm-bookmark-edit-bookmark-1 607,25414
+(defun helm-bookmark-maybe-save-bookmark 633,26785
+(defun helm-bookmark-rename 638,27024
+(defun helm-bookmark-run-edit 665,28292
+(defun helm-bookmark-run-jump-other-frame 673,28527
+(defun helm-bookmark-run-jump-other-window 680,28782
+(defun helm-bookmark-run-delete 687,29028
+(defun helm-bookmark-get-bookmark-from-name 695,29294
+(defun helm-delete-marked-bookmarks 701,29553
+(defun helm-bookmarks 709,29801
+(defun helm-filtered-bookmarks 718,30072
+
+helm-bookmark.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-buffers.el,4959
+(defgroup helm-buffers 35,1191
+(defcustom helm-boring-buffer-regexp-list39,1292
+(defcustom helm-white-buffer-regexp-list 48,1662
+(defcustom helm-buffers-favorite-modes 55,1901
+(defcustom helm-buffer-max-length 63,2237
+(defcustom helm-buffer-details-flag 70,2507
+(defcustom helm-buffers-fuzzy-matching 75,2641
+(defcustom helm-buffer-skip-remote-checking 82,2878
+(defcustom helm-buffers-truncate-lines 87,3025
+(defcustom helm-buffers-left-margin-width 92,3165
+(defcustom helm-mini-default-sources 97,3343
+(defcustom helm-buffers-end-truncated-string 107,3755
+(defcustom helm-buffers-column-separator 112,3907
+(defcustom helm-buffer--pretty-names 117,4039
+(defcustom helm-buffers-maybe-switch-to-tab 129,4662
+(defgroup helm-buffers-faces 139,4874
+(defface helm-buffer-saved-out145,5017
+(defface helm-buffer-not-saved150,5188
+(defface helm-buffer-modified155,5346
+(defface helm-buffer-size160,5486
+(defface helm-buffer-process166,5680
+(defface helm-buffer-directory171,5819
+(defface helm-buffer-file176,5994
+(defface helm-buffer-archive181,6149
+(defface helm-non-file-buffer186,6297
+(defvar helm-buffers-tick-counter 191,6446
+(defvar helm-buffer-map206,6916
+(defvar helm-buffers-ido-virtual-map238,8808
+(defvar helm-buffer-max-len-mode 250,9314
+(defvar helm-buffers-in-project-p 251,9352
+(defvar helm-source-buffers-list 252,9391
+(defun helm-buffers-list--init 254,9430
+(defclass helm-source-buffers 281,11019
+(cl-defun helm-buffers-create-new-buffer-1 299,11713
+(defun helm-buffers-create-new-buffer 313,12365
+(defun helm-buffers-create-new-buffer-ow 316,12464
+(defun helm-buffers-not-found-run-switch-ow 319,12597
+(defun helm-buffers-create-new-buffer-of 326,12870
+(defun helm-buffers-not-found-run-switch-of 329,13002
+(defvar helm-buffer-not-found-map336,13274
+(defvar helm-source-buffer-not-found344,13596
+(defvar helm-source-ido-virtual-buffers362,14200
+(defun helm-buffer-list 388,15379
+(defun helm-buffer-size 399,15720
+(defun helm-buffer--show-details 408,15958
+(defun helm-buffer--format-mode-name 427,16609
+(defun helm-buffer--details 435,16926
+(defun helm-highlight-buffers 505,20464
+(defun helm-buffer--get-preselection 547,22800
+(defun helm-toggle-buffers-details 566,23631
+(defun helm-buffers--pattern-sans-filters 579,24178
+(defun helm-buffers-sort-transformer 585,24467
+(defun helm-buffers-mark-similar-buffers-1 595,24863
+(defun helm-buffers-mark-similar-buffers 623,26099
+(defun helm-buffer--match-mjm 638,26569
+(defvar helm-buffer--memo-hash 653,27259
+(defun helm-buffer--memo-pattern 654,27322
+(defun helm-buffer--match-pattern 659,27511
+(defun helm-buffers--match-from-mjm 673,28141
+(defun helm-buffers--match-from-pat 687,28695
+(defun helm-buffers--match-from-inside 699,29220
+(defun helm-buffers--match-from-directory 722,30235
+(defun helm-buffers-match-function 739,30947
+(defun helm-buffer-query-replace-1 747,31239
+(defun helm-buffer-query-replace-regexp 766,32107
+(defun helm-buffer-query-replace 769,32202
+(defun helm-buffer-toggle-diff 772,32282
+(defun helm-buffer-diff-persistent 783,32734
+(defun helm-revert-buffer 791,33013
+(defun helm-revert-marked-buffers 796,33174
+(defun helm-buffer-revert-and-update 799,33274
+(defun helm-buffer-revert-persistent 808,33643
+(defun helm-buffer-save-and-update 816,33947
+(defun helm-buffer-save-some-buffers 828,34462
+(defun helm-buffer-run-save-some-buffers 832,34595
+(defun helm-buffer-save-persistent 840,34925
+(defun helm-buffers-rename-buffer 848,35217
+(defun helm-buffer-run-rename-buffer 852,35367
+(defun helm-buffer-run-kill-persistent 859,35622
+(defun helm-kill-marked-buffers 867,35923
+(defun helm-buffer-run-kill-buffers 876,36264
+(defun helm-buffer-run-grep 883,36513
+(defun helm-buffer-run-zgrep 890,36732
+(defun helm-buffer-run-query-replace-regexp 897,36954
+(defun helm-buffer-run-query-replace 904,37236
+(defun helm-buffer-switch-other-window 911,37490
+(defun helm-buffer-switch-other-frame 918,37771
+(defun helm-buffers-switch-to-buffer-new-tab 925,38038
+(defun helm-buffer-switch-buffers 933,38396
+(defun helm-buffer-switch-buffers-other-window 941,38717
+(defun helm-buffer-run-ediff 946,38912
+(defun helm-buffer-run-ediff-merge 953,39142
+(defun helm-buffers-persistent-kill-1 960,39390
+(defun helm-buffers--quote-truncated-buffer 973,39956
+(defun helm-buffers-persistent-kill 989,40534
+(defun helm-buffers-list-persistent-action 1009,41424
+(defun helm-ediff-marked-buffers 1021,42013
+(defun helm-ediff-marked-buffers-merge 1042,42682
+(defun helm-multi-occur-as-action 1047,42864
+(defun helm-buffers-run-occur 1064,43752
+(defun helm-buffers-toggle-show-hidden-buffers 1071,43976
+(defun helm-buffers-browse-project 1090,44894
+(defun helm-buffers-run-browse-project 1095,45047
+(defun helm-skip-boring-buffers 1106,45381
+(defun helm-shadow-boring-buffers 1111,45566
+(defun helm-buffers-list 1118,45814
+(defun helm-mini 1133,46369
+(defun helm-quit-and-helm-mini 1146,46861
+
+helm-buffers.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-color.el,603
+(defun helm-custom-faces-init 27,901
+(defvar helm-source-customize-face41,1343
+(defun helm-colors-init 61,2056
+(defun helm-color-insert-name 72,2353
+(defun helm-color-kill-name 76,2472
+(defun helm-color-insert-rgb 79,2560
+(defun helm-color-kill-rgb 83,2677
+(defun helm-color-run-insert-name 86,2763
+(defun helm-color-run-kill-name 92,2993
+(defun helm-color-run-insert-rgb 98,3215
+(defun helm-color-run-kill-rgb 104,3441
+(defvar helm-color-map110,3659
+(defvar helm-source-colors119,4012
+(defun helm-colors-get-name 133,4527
+(defun helm-colors-get-rgb 144,4822
+(defun helm-colors 156,5131
+
+helm-color.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-comint.el,983
+(defface helm-comint-prompts-promptidx35,1127
+(defface helm-comint-prompts-buffer-name40,1274
+(defcustom helm-comint-prompts-promptidx-p 45,1423
+(defcustom helm-comint-mode-list 50,1533
+(defcustom helm-comint-next-prompt-function 56,1777
+(defcustom helm-comint-max-offset 67,2364
+(defvar helm-comint-prompts-keymap78,2865
+(defun helm-comint-prompts-list 86,3166
+(defun helm-comint-prompts-list-all 109,4109
+(defun helm-comint-prompts-transformer 115,4323
+(defun helm-comint-prompts-all-transformer 132,5119
+(cl-defun helm-comint-prompts-goto 135,5226
+(defun helm-comint-prompts-goto-other-window 144,5562
+(defun helm-comint-prompts-goto-other-frame 147,5691
+(defun helm-comint-prompts-other-window 150,5818
+(defun helm-comint-prompts-other-frame 156,6028
+(defun helm-comint-prompts 163,6250
+(defun helm-comint-prompts-all 176,6821
+(defun helm-comint-input-ring-action 196,7756
+(defvar helm-source-comint-input-ring202,7963
+(defun helm-comint-input-ring 216,8568
+
+helm-comint.elc,191
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+(defvar helm-comint-prompts-keymap keymap17,2355
+
+helm-command.el,1108
+(defgroup helm-command 27,915
+(defcustom helm-M-x-always-save-history 31,1022
+(defcustom helm-M-x-reverse-history 36,1186
+(defgroup helm-command-faces 45,1364
+(defface helm-M-x-key 51,1507
+(defvar helm-M-x-input-history 56,1651
+(defvar helm-M-x-prefix-argument 57,1687
+(defun helm-M-x-get-major-mode-command-alist 61,1775
+(defun helm-get-mode-map-from-mode 69,2127
+(defun helm-M-x-current-mode-map-alist 86,2954
+(defun helm-M-x-transformer-1 93,3222
+(defun helm-M-x-transformer 121,4604
+(defun helm-M-x-transformer-no-sort 126,4817
+(defun helm-M-x--notify-prefix-arg 130,4966
+(defun helm-cmd--get-current-function-name 136,5161
+(defun helm-cmd--get-preconfigured-commands 142,5367
+(defvar helm-M-x-map153,5862
+(defun helm-M-x-universal-argument 160,6076
+(defun helm-M-x-persistent-action 175,6687
+(defun helm-M-x--move-selection-after-hook 179,6804
+(defun helm-M-x--before-action-hook 182,6884
+(defclass helm-M-x-class 186,7025
+(defun helm-M-x-read-extended-command 196,7424
+(defun helm-M-x-execute-command 261,10765
+(defun helm-M-x--vanilla-M-x 287,11882
+(defun helm-M-x 299,12162
+
+helm-command.elc,26
+function returns 78,8011
+
+helm-config.el,266
+(defgroup helm-config 30,1037
+(defcustom helm-command-prefix-key 34,1117
+(defcustom helm-minibuffer-history-key 48,1605
+(defvar helm-command-map78,2805
+(define-prefix-command 'helm-command-prefix)helm-command-prefix122,5143
+(defun helm-configuration 133,5334
+
+helm-config.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-dabbrev.el,1144
+(defgroup helm-dabbrev 25,920
+(defcustom helm-dabbrev-always-search-all 29,1021
+(defcustom helm-dabbrev-candidates-number-limit 37,1286
+(defcustom helm-dabbrev-ignored-buffers-regexps49,1769
+(defcustom helm-dabbrev-related-buffer-fn 55,2010
+(defcustom helm-dabbrev-major-mode-assoc 66,2494
+(defcustom helm-dabbrev-lineno-around 81,3200
+(defcustom helm-dabbrev-cycle-threshold 86,3348
+(defcustom helm-dabbrev-case-fold-search 92,3581
+(defvaralias 'helm-dabbrev--regexp helm-dabbrev--regexp102,3997
+(defvar helm-dabbrev-separator-regexp106,4235
+(defvar helm-dabbrev-map111,4388
+(defvar helm-dabbrev--cache 119,4611
+(defvar helm-dabbrev--data 120,4644
+(cl-defstruct helm-dabbrev-info 121,4676
+(defvar helm-dabbrev--already-tried 122,4733
+(defvar helm-dabbrev--computing-cache 123,4774
+(defun helm-dabbrev--buffer-list 127,4899
+(defun helm-dabbrev--same-major-mode-p 133,5141
+(defun helm-dabbrev--collect 137,5324
+(defun helm-dabbrev--search-and-store 191,7759
+(defun helm-dabbrev--search 232,9581
+(defun helm-dabbrev--get-candidates 255,10472
+(defun helm-dabbrev-default-action 264,10828
+(cl-defun helm-dabbrev 276,11188
+
+helm-dabbrev.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-easymenu.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-elisp-package.el,2067
+(defgroup helm-el-package 24,894
+(defcustom helm-el-package-initial-filter 28,966
+(defcustom helm-el-truncate-lines 37,1390
+(defvar helm-el-package--show-only 43,1538
+(defvar helm-el-package--initialized-p 44,1579
+(defvar helm-el-package--tabulated-list 45,1623
+(defvar helm-el-package--upgrades 46,1668
+(defvar helm-el-package--removable-packages 47,1707
+(defun helm-el-package--init 53,1927
+(defun helm-el-package-describe 99,4185
+(defun helm-el-package-visit-homepage 103,4343
+(defun helm-el-run-visit-homepage 115,4868
+(defun helm-elisp-package--pkg-name 121,5059
+(defun helm-el-package-install-1 126,5169
+(defun helm-el-package-install 144,6070
+(defun helm-el-run-package-install 147,6171
+(defun helm-el-package-uninstall-1 153,6357
+(defun helm-el-package-uninstall 173,7297
+(defun helm-el-run-package-uninstall 176,7426
+(defun helm-el-package-menu--find-upgrades 182,7618
+(defun helm-el-package--user-installed-p 210,9000
+(defun helm-el-package-upgrade-1 218,9327
+(defun helm-el-package-upgrade 241,10296
+(defun helm-el-run-package-upgrade 249,10594
+(defun helm-el-package-upgrade-all 255,10780
+(defun helm-el-package-upgrade-all-action 266,11315
+(defun helm-el-run-package-upgrade-all 269,11404
+(defun helm-el-package--transformer 275,11609
+(defun helm-el-package-show-built-in 310,13514
+(defun helm-el-package-show-upgrade 317,13710
+(defun helm-el-package-show-installed 324,13903
+(defun helm-el-package-show-all 331,14102
+(defun helm-el-package-show-uninstalled 338,14283
+(defvar helm-el-package-map345,14488
+(defvar helm-source-list-el-package 361,15319
+(defclass helm-list-el-package-source 362,15360
+(defun helm-el-package--action-transformer 375,16033
+(defun helm-el-package--update 407,17884
+(defun helm-el-package-recompile 410,17964
+(defun helm-el-package-recompile-1 414,18098
+(defun helm-el-package-reinstall 419,18292
+(defun helm-el-package-reinstall-1 424,18502
+(defun helm-el-run-package-reinstall 439,19117
+(defun helm-list-elisp-packages 446,19324
+(defun helm-list-elisp-packages-no-fetch 459,19825
+
+helm-elisp-package.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-elisp.el,3497
+(defgroup helm-elisp 36,1186
+(defcustom helm-turn-on-show-completion 40,1283
+(defcustom helm-show-completion-min-window-height 45,1446
+(defcustom helm-lisp-quoted-function-list51,1652
+(defcustom helm-lisp-unquoted-function-list60,1991
+(defcustom helm-apropos-fuzzy-match 67,2228
+(defcustom helm-lisp-fuzzy-completion 72,2367
+(defcustom helm-apropos-function-list 80,2700
+(defcustom helm-apropos-defaut-info-lookup-sources 90,3261
+(defcustom helm-show-completion-display-function97,3617
+(defgroup helm-elisp-faces 115,4139
+(defface helm-lisp-show-completion121,4276
+(defface helm-lisp-completion-info126,4445
+(defcustom helm-elisp-help-function131,4598
+(defcustom helm-locate-library-fuzzy-match 140,4943
+(defvar helm-show-completion-overlay 150,5188
+(defun helm-show-completion 153,5279
+(defun helm-show-completion-init-overlay 159,5488
+(defun helm-show-completion-default-display-function 164,5695
+(defmacro with-helm-show-completion 183,6732
+(defun helm-lisp-completion--predicate-at-point 215,8066
+(defun helm-thing-before-point 252,9772
+(defun helm-bounds-of-thing-before-point 270,10443
+(defun helm-insert-completion-at-point 275,10646
+(defvar helm-lisp-completion--cache 290,11227
+(defvar helm-lgst-len 291,11268
+(defun helm-lisp-completion-at-point 293,11310
+(defun helm-lisp-completion-persistent-action 344,13962
+(defun helm-lisp-completion-persistent-help 350,14258
+(defun helm-elisp--show-help-1 356,14557
+(defun helm-elisp-show-help 369,15134
+(defun helm-elisp-show-doc-modeline 378,15538
+(defun helm-lisp-completion-transformer 388,15902
+(defun helm-get-first-line-documentation 403,16548
+(defun helm-complete-file-name-at-point 428,17574
+(defun helm-lisp-indent 456,18749
+(defun helm-lisp-completion-or-file-name-at-point 466,19150
+(defvar helm-apropos-history 482,19695
+(defun helm-apropos-init 484,19730
+(defun helm-apropos-init-faces 495,20171
+(defun helm-apropos-default-sort-fn 512,20822
+(defun helm-apropos-clean-history-variable 517,20978
+(defun helm-apropos-clean-ring 531,21640
+(defun helm-apropos-action-transformer 550,22418
+(defun helm-def-source--emacs-variables 574,23541
+(defun helm-def-source--emacs-faces 593,24458
+(defun helm-def-source--emacs-commands 615,25478
+(defun helm-def-source--emacs-functions 631,26232
+(defun helm-def-source--eieio-classes 652,27245
+(defun helm-def-source--eieio-generic 670,28062
+(defun helm-info-lookup-fallback-source 688,28914
+(defun helm-info-lookup-symbol-1 715,29889
+(defun helm-info-lookup-symbol 723,30229
+(defun helm-apropos 730,30502
+(defvar helm-source-advice747,31100
+(defun helm-advice-candidates 757,31488
+(defun helm-advice-persistent-action 772,32200
+(defun helm-advice-toggle 777,32378
+(defun helm-advice-update-current-display-string 789,32818
+(defun helm-manage-advice 798,33157
+(defun helm-locate-library-scan-list 807,33356
+(defun helm-locate-library 816,33668
+(defun helm-set-variable 843,35126
+(defclass helm-absolute-time-timers-class 859,35628
+(defvar helm-source-absolute-time-timers868,35950
+(defclass helm-idle-time-timers-class 871,36070
+(defvar helm-source-idle-time-timers880,36393
+(defun helm-elisp--format-timer 883,36501
+(defun helm-timers 896,37061
+(defvar helm-sexp--last-sexp 908,37309
+(defun helm-sexp-eval-1 910,37371
+(defun helm-complex-command-history--called-interactively-skip 922,37879
+(defun helm-sexp-eval 928,38104
+(defvar helm-source-complex-command-history931,38183
+(defun helm-complex-command-history 953,39279
+
+helm-elisp.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-eshell.el,1463
+(defgroup helm-eshell 46,1800
+(defcustom helm-eshell-fuzzy-match 51,1885
+(defvar helm-eshell-history-map57,2032
+(defvar helm-esh-completion-map64,2235
+(defvar helm-eshell--quit-flag 71,2437
+(defvar helm-ec-target 75,2489
+(defun helm-ec-insert 76,2516
+(defun helm-esh-transformer 108,3907
+(defclass helm-esh-source 120,4250
+(defun helm-esh-get-candidates 135,4975
+(defclass helm-eshell-history-source 196,8089
+(defun helm-esh-pcomplete-input 217,8819
+(defun helm-esh-pcomplete-default-source 237,9649
+(defvar helm-esh-pcomplete-build-source-fn 242,9857
+(defun helm-esh-pcomplete--make-helm 245,9994
+(defun helm-esh-pcomplete 253,10251
+(defun helm-eshell--quit-hook-fn 330,14163
+(defun helm-eshell-history 334,14250
+(defface helm-eshell-prompts-promptidx360,15075
+(defface helm-eshell-prompts-buffer-name365,15222
+(defcustom helm-eshell-prompts-promptidx-p 370,15371
+(defvar helm-eshell-prompts-keymap375,15481
+(defun helm-eshell-prompts-list 386,15846
+(defun helm-eshell-prompts-list-all 408,16762
+(defun helm-eshell-prompts-transformer 414,16961
+(defun helm-eshell-prompts-all-transformer 431,17760
+(cl-defun helm-eshell-prompts-goto 434,17867
+(defun helm-eshell-prompts-goto-other-window 443,18204
+(defun helm-eshell-prompts-goto-other-frame 446,18333
+(defun helm-eshell-prompts-other-window 449,18460
+(defun helm-eshell-prompts-other-frame 455,18670
+(defun helm-eshell-prompts 462,18892
+(defun helm-eshell-prompts-all 475,19429
+
+helm-eshell.elc,185
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+(defvar helm-esh-completion-map map19,1131
+
+helm-eval.el,631
+(defgroup helm-eval 26,901
+(defcustom helm-eldoc-in-minibuffer-show-fn30,996
+(defcustom helm-show-info-in-mode-line-delay 37,1192
+(defvar helm-eldoc-active-minibuffers-list 68,2380
+(defvar helm-eval-expression-map70,2429
+(defun helm-build-evaluation-result-source 84,3069
+(defun helm-eval-new-line-and-indent 109,4541
+(defun helm-eldoc-store-minibuffer 113,4630
+(defun helm-eldoc-show-in-eval 118,4852
+(defun helm-show-info-in-mode-line 135,5741
+(defvar helm-source-calculation-result147,6079
+(defun helm-eval-expression 164,7025
+(defun helm-eval-expression-with-eldoc 175,7398
+(defun helm-calcul-expression 190,7971
+
+helm-eval.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-external.el,534
+(defgroup helm-external 26,921
+(defcustom helm-raise-command 30,1024
+(defcustom helm-external-programs-associations 37,1269
+(defcustom helm-default-external-file-browser 44,1577
+(defvar helm-external-command-history 56,1970
+(defvar helm-external-commands-list 57,2013
+(defun helm-external-commands-list-1 62,2191
+(defun helm-run-or-raise 83,3277
+(defun helm-get-mailcap-for-file 118,4918
+(defun helm-get-default-program-for-file 128,5390
+(defun helm-open-file-externally 139,5973
+(defun helm-run-external-command 185,8310
+
+helm-external.elc,238
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+If this variable is not set by the user,18,1787
+(defvar helm-external-commands-list nil 20,1866
+
+helm-files.el,15815
+(defgroup helm-files 62,2437
+(defcustom helm-tramp-verbose 66,2526
+(defcustom helm-ff-auto-update-initial-value 73,2759
+(defcustom helm-ff-history-max-length 82,3094
+(defcustom helm-ff-fuzzy-matching 87,3235
+(defcustom helm-ff-exif-data-program 93,3437
+(defcustom helm-ff-exif-data-program-args 98,3580
+(defcustom helm-ff-newfile-prompt-p 103,3718
+(defcustom helm-ff-avfs-directory 109,3879
+(defcustom helm-ff-file-compressed-list 117,4180
+(defcustom helm-ff-printer-list 122,4351
+(defcustom helm-ff-transformer-show-only-basename 131,4754
+(defcustom helm-ff-signal-error-on-dot-files 138,5022
+(defcustom helm-ff-search-library-in-sexp 145,5284
+(defcustom helm-tooltip-hide-delay 150,5436
+(defcustom helm-ff-file-name-history-use-recentf 155,5571
+(defcustom helm-ff-skip-boring-files 160,5740
+(defcustom helm-ff-skip-git-ignored-files 170,6101
+(defcustom helm-ff-candidate-number-limit 179,6378
+(defcustom helm-ff-up-one-level-preselect 189,6859
+(defcustom helm-files-save-history-extra-sources202,7339
+(defcustom helm-find-files-before-init-hook 209,7586
+(defcustom helm-find-files-after-init-hook 214,7733
+(defcustom helm-find-files-bookmark-prefix 219,7878
+(defcustom helm-ff-guess-ffap-filenames 224,8036
+(defcustom helm-ff-guess-ffap-urls 231,8272
+(defcustom helm-ff-no-preselect 239,8575
+(defcustom helm-ff-allow-non-existing-file-at-point 244,8724
+(defcustom helm-find-files-ignore-thing-at-point 249,8907
+(defcustom helm-substitute-in-filename-stay-on-remote 257,9219
+(defcustom helm-ff-goto-first-real-dired-exceptions 262,9396
+(defcustom helm-mounted-network-directories 267,9592
+(defcustom helm-browse-project-default-find-files-fn277,9928
+(defcustom helm-ff-kill-or-find-buffer-fname-fn289,10347
+(defcustom helm-modes-using-escaped-strings311,11230
+(defcustom helm-ff-allow-recursive-deletes 317,11418
+(defcustom helm-ff-delete-files-function 328,11904
+(defcustom helm-trash-remote-files 346,12659
+(defcustom helm-list-directory-function363,13303
+(defcustom helm-ff-initial-sort-method 390,14480
+(defcustom helm-ff-rotate-image-program 400,14836
+(defcustom helm-ff-rotate-image-switch 408,15105
+(defgroup helm-files-faces 419,15384
+(defface helm-ff-prefix425,15521
+(defface helm-ff-executable430,15696
+(defface helm-ff-suid435,15843
+(defface helm-ff-directory440,15996
+(defface helm-ff-dotted-directory445,16163
+(defface helm-ff-dotted-symlink-directory450,16340
+(defface helm-ff-symlink455,16540
+(defface helm-ff-invalid-symlink460,16686
+(defface helm-ff-denied465,16856
+(defface helm-ff-file470,17021
+(defface helm-ff-truename475,17168
+(defface helm-ff-dirs480,17325
+(defface helm-ff-socket485,17507
+(defface helm-ff-pipe490,17649
+(defface helm-history-deleted495,17833
+(defface helm-history-remote500,17994
+(defface helm-delete-async-message505,18145
+(defvar helm-find-files-map514,18341
+(defvar helm-read-file-map586,23154
+(defcustom helm-ff-lynx-style-map 605,24274
+(defcustom helm-ff-DEL-up-one-level-maybe 624,25237
+(defvar helm-find-files-doc-header 635,25551
+(defvar helm-ff-auto-update-flag 637,25747
+(defvar helm-ff-last-expanded 640,25925
+(defvar helm-ff-default-directory 642,26003
+(defvar helm-ff-history 643,26042
+(defvar helm-ff-cand-to-mark 644,26071
+(defvar helm-ff-url-regexp645,26105
+(defvar helm-tramp-file-name-regexp 652,26520
+(defvar helm-marked-buffer-name 653,26578
+(defvar helm-ff--auto-update-state 654,26627
+(defvar helm-ff--deleting-char-backward 655,26667
+(defvar helm-multi-files--toggle-locate 656,26712
+(defvar helm-ff--move-to-first-real-candidate 657,26757
+(defvar helm-find-files--toggle-bookmark 658,26806
+(defvar helm-ff--tramp-methods 659,26852
+(defvar helm-ff--directory-files-hash 660,26888
+(defvar helm-ff-history-buffer-name 661,26958
+(defcustom helm-find-files-actions666,27051
+(defvar helm-source-find-files 723,30187
+(defclass helm-source-ffiles 727,30301
+(defun helm-ff-make-bookmark-record 767,32102
+(defun helm-ff-bookmark-jump 774,32353
+(defun helm-ff-bookmark-set 787,33025
+(defcustom helm-dwim-target 798,33397
+(defun helm-dwim-target-directory 812,34072
+(defun helm-ff--count-and-collect-dups 839,35420
+(defun helm-find-files-do-action 855,36159
+(defun helm-find-files-copy 903,38669
+(defun helm-find-files-backup 907,38787
+(defun helm-find-files-rename 914,39117
+(defun helm-find-files-symlink 918,39241
+(defun helm-find-files-relsymlink 922,39368
+(defun helm-find-files-hardlink 926,39504
+(defun helm-find-files-other-window 930,39634
+(defun helm-find-files-byte-compile 938,39961
+(defun helm-find-files-load-files 945,40248
+(defun helm-find-files-ediff-files-1 951,40464
+(defun helm-find-files-ediff-files 972,41456
+(defun helm-find-files-ediff-merge-files 975,41549
+(defun helm-find-files-grep 978,41655
+(defun helm-ff-git-grep 983,41858
+(defun helm-find-files-ag 987,42027
+(defun helm-ff-zgrep 991,42151
+(defun helm-ff-pdfgrep 995,42331
+(defun helm-ff-etags-select 1008,42936
+(defvar eshell-command-aliases-list 1018,43426
+(defvar helm-eshell-command-on-file-input-history 1019,43467
+(cl-defun helm-find-files-eshell-command-on-file-1 1020,43522
+(defun helm-find-files-eshell-command-on-file 1144,49750
+(defun helm-ff-switch-to-eshell 1149,50002
+(defun helm-ff--eshell-interactive-buffer-p 1173,51135
+(defun helm-ff-touch-files 1181,51399
+(defun helm-ff-run-touch-files 1221,53390
+(defun helm-ff-sort-by-size 1228,53627
+(defun helm-ff-sort-by-newest 1236,53924
+(defun helm-ff-sort-alpha 1244,54231
+(defun helm-ff-serial-rename-action 1252,54527
+(defun helm-ff-member-directory-p 1291,56358
+(cl-defun helm-ff-serial-rename-11297,56626
+(defun helm-ff-serial-rename 1345,59151
+(defun helm-ff-serial-rename-by-symlink 1352,59422
+(defun helm-ff-serial-rename-by-copying 1359,59705
+(defvar helm-ff-query-replace-fnames-history-from 1366,59982
+(defvar helm-ff-query-replace-fnames-history-to 1367,60037
+(defun helm-ff-query-replace-on-filenames 1368,60090
+(defun helm-ff--prepare-str-with-regexp 1493,68144
+(defun helm-ff-query-replace-fnames-on-marked 1515,69302
+(defun helm-ff-run-query-replace-fnames-on-marked 1520,69514
+(defun helm-ff-query-replace 1526,69745
+(defun helm-ff-query-replace-regexp 1531,69978
+(defun helm-ff-run-query-replace 1536,70222
+(defun helm-ff-run-query-replace-regexp 1542,70402
+(defun helm-ff-toggle-auto-update 1548,70603
+(defun helm-ff-run-toggle-auto-update 1559,71061
+(defun helm-ff-delete-char-backward 1566,71333
+(defun helm-ff-delete-char-backward--exit-fn 1588,72250
+(defvar helm-ff--RET-disabled 1592,72406
+(defun helm-ff-RET-1 1593,72441
+(defun helm-ff-RET 1611,73186
+(defun helm-ff-TAB-1 1623,73514
+(defun helm-ff-TAB 1632,73833
+(defun helm-ff-RET-must-match 1646,74238
+(defun helm-ff-run-grep 1651,74363
+(defun helm-ff-run-git-grep 1658,74575
+(defun helm-ff-run-grep-ag 1665,74795
+(defun helm-ff-run-pdfgrep 1671,74960
+(defun helm-ff-run-zgrep 1678,75176
+(defun helm-ff-run-copy-file 1685,75383
+(defun helm-ff-run-rename-file 1692,75610
+(defun helm-ff-run-byte-compile-file 1699,75845
+(defun helm-ff-run-load-file 1706,76104
+(defun helm-ff-run-eshell-command-on-file 1713,76337
+(defun helm-ff-run-ediff-file 1721,76626
+(defun helm-ff-run-ediff-merge-file 1728,76863
+(defun helm-ff-run-symlink-file 1736,77129
+(defun helm-ff-run-relsymlink-file 1743,77368
+(defun helm-ff-run-hardlink-file 1750,77616
+(defun helm-ff-delete-files 1757,77859
+(defun helm-ff-run-delete-file 1761,77986
+(defun helm-ff-run-complete-fn-at-point 1768,78220
+(defun helm-ff-run-switch-to-eshell 1776,78504
+(defun helm-ff-run-switch-other-window 1783,78756
+(defun helm-ff-run-switch-other-frame 1791,79081
+(defun helm-ff-run-open-file-externally 1798,79339
+(defun helm-ff-run-open-file-with-default-tool 1805,79612
+(defun helm-ff-locate 1812,79906
+(defun helm-ff-run-locate 1829,80750
+(defun helm-files-insert-as-org-link 1836,80962
+(defun helm-ff-run-insert-org-link 1840,81082
+(defun helm-ff-run-find-file-as-root 1846,81274
+(defun helm-ff-run-find-alternate-file 1852,81463
+(defun helm-ff-run-mail-attach-files 1858,81653
+(defun helm-ff-run-etags 1865,81917
+(defun helm-ff-print 1873,82168
+(defun helm-ff-run-print-file 1923,84203
+(defun helm-ff-checksum 1930,84426
+(defun helm-ff-toggle-basename 1965,85970
+(defun helm-ff-run-toggle-basename 1974,86365
+(defun helm-reduce-file-name-1 1981,86562
+(defun helm-reduce-file-name-2 1990,87003
+(defun helm-reduce-file-name 2002,87487
+(defun helm-iter-reduce-fname 2009,87746
+(defvar helm-find-files--level-tree 2020,88191
+(defvar helm-find-files--level-tree-iterator 2021,88232
+(defun helm-find-files-up-one-level 2022,88282
+(defun helm-find-files-down-last-level 2062,90364
+(defun helm-find-files--reset-level-tree 2077,91038
+(defun helm-ff-retrieve-last-expanded 2085,91390
+(defun helm-ff-move-to-first-real-candidate 2100,92054
+(defun helm-ff-update-when-only-one-matched 2125,93219
+(defun helm-ff-auto-expand-to-home-or-root 2209,98159
+(defun helm-ff--expand-file-name-no-dot 2245,100233
+(defun helm-ff--expand-substitued-pattern 2254,100677
+(defun helm-substitute-in-filename 2271,101488
+(defun helm-point-file-in-dired 2300,102878
+(defun helm-marked-files-in-dired 2308,103204
+(defun helm-ff-run-marked-files-in-dired 2324,103998
+(defun helm-ff--create-tramp-name 2331,104255
+(defun helm-ff--tramp-cons-or-vector 2345,105010
+(defun helm-ff--get-tramp-methods 2351,105197
+(defun helm-ff--previous-mh-tramp-method 2356,105380
+(defun helm-ff--get-host-from-tramp-invalid-fname 2369,105855
+(cl-defun helm-ff--tramp-hostnames 2389,106966
+(defun helm-ff-before-action-hook-fn 2414,108523
+(cl-defun helm-ff--invalid-tramp-name-p 2425,109079
+(defun helm-ff--tramp-postfixed-p 2430,109298
+(defun helm-ff-set-pattern 2445,109768
+(defun helm-find-files-get-candidates 2505,112681
+(defun helm-list-directory 2625,119246
+(defsubst helm-ff-file-larger-that-file-p 2650,120392
+(defun helm-list-dir-lisp 2655,120556
+(defun helm-list-dir-external 2676,121668
+(defun helm-ff-directory-files 2720,123788
+(defun helm-ff-handle-backslash 2748,125110
+(defun helm-ff-fuzzy-matching-p 2755,125343
+(defun helm-ff--transform-pattern-for-completion 2759,125473
+(defun helm-dir-is-dot 2809,128066
+(defun helm-ff-save-history 2812,128151
+(defun helm-files-save-file-name-history 2823,128681
+(defun helm-ff-valid-symlink-p 2844,129671
+(defun helm-get-default-mode-for-file 2852,129944
+(defun helm-ff-properties 2858,130210
+(defun helm-ff-properties-persistent 2910,133081
+(defun helm-ff-persistent-delete 2918,133384
+(defun helm-ff-dot-file-p 2926,133675
+(defun helm-ff-kill-buffer-fname 2930,133788
+(defun helm-ff-kill-or-find-buffer-fname 2939,134202
+(defun helm-ff-run-kill-buffer-persistent 2964,135361
+(defun helm-ff-persistent-open-file-externally 2973,135710
+(defun helm-ff-run-preview-file-externally 2980,136031
+(defun helm-ff-prefix-filename 2987,136330
+(defun helm-ff-score-candidate-for-pattern 3005,137219
+(defun helm-ff-sort-candidates-1 3015,137667
+(defun helm-ff-sort-candidates 3045,139251
+(defun helm-ff-boring-file-p 3050,139469
+(defvar helm-ff--git-found-p 3057,139728
+(defun helm-ff-git-ignored-p 3058,139762
+(defun helm-ff-filter-candidate-one-by-one 3065,140042
+(defun helm-find-files-action-transformer 3180,145777
+(defun helm-ff-trash-action 3234,148388
+(defun helm-ff-trash-rm 3270,150240
+(defun helm-ff-trash-rm-1 3279,150597
+(defun helm-restore-file-from-trash 3294,151192
+(defun helm-restore-file-from-trash-1 3308,151805
+(defun helm-ff-trash-file-p 3328,152802
+(defun helm-ff--get-dest-file-from-trash 3334,153028
+(defun helm-ff-trash-list 3337,153145
+(defun helm-ff-goto-linum 3354,154049
+(defun helm-ff-mail-attach-files 3367,154642
+(defun helm-ff-rotate-current-image-1 3396,155848
+(defun helm-ff-rotate-image-left 3420,157102
+(defun helm-ff-rotate-image-right 3425,157273
+(defun helm-ff-rotate-left-persistent 3430,157445
+(defun helm-ff-rotate-right-persistent 3438,157735
+(defun helm-ff-exif-data 3446,158029
+(cl-defun helm-find-files-persistent-action-if 3457,158564
+(defun helm-find-files-recursive-dirs 3600,166309
+(defun helm-ff-recursive-dirs 3637,168069
+(defun helm-ff-file-compressed-p 3644,168349
+(defun helm-ff--fname-at-point 3649,168529
+(defun helm-insert-file-name-completion-at-point 3660,168926
+(defun helm-ff--format-fname-to-insert 3710,171307
+(cl-defun helm-find-files-history 3730,172119
+(defun helm-find-files-1 3761,173479
+(defun helm-ff--update-resume-after-hook 3805,175559
+(defun helm-ff-clean-initial-input 3819,176262
+(defun helm-ff-setup-update-hook 3825,176494
+(defun helm-find-files-cleanup 3832,176815
+(defun helm-ff-bookmark 3840,177108
+(defun helm-find-files-switch-to-bookmark 3844,177231
+(defun helm-find-files-initial-input 3852,177516
+(defun helm-ffap-guesser 3873,178459
+(defun helm-find-files-input 3913,180564
+(defun helm-ff-find-url-at-point 3949,182357
+(defun helm-find-library-at-point 3963,183041
+(defun helm-ff--valid-default-directory 3991,184187
+(cl-defun helm-dired-action 3998,184437
+(defun helm-get-dest-fnames-from-list 4070,188149
+(defun helm-ff-maybe-mark-candidates 4088,188966
+(defun helm-file-buffers 4110,189746
+(defun helm-ff--delete-by-moving-to-trash 4118,190048
+(defun helm-ff-quick-delete 4134,190621
+(defun helm-delete-file 4167,192327
+(defun helm-delete-marked-files 4230,195297
+(defvar helm-ff-delete-log-file4261,196629
+(defvar helm-ff--trash-flag 4265,196804
+(define-minor-mode helm-ff--delete-async-modeline-mode4267,196838
+(defun helm-delete-async-mode-line-message 4283,197614
+(defun helm-delete-marked-files-async 4296,198093
+(defun helm-find-file-or-marked 4368,201688
+(defun helm-ff-find-file-other-tab 4405,203547
+(defun helm-ff--mkdir 4413,203871
+(defun helm-transform-file-load-el 4433,204757
+(defun helm-transform-file-browse-url 4440,205055
+(defun helm-file-on-mounted-network-p 4450,205500
+(defun helm-ff-cache-add-file 4461,205905
+(defun helm-ff-file-cache-remove-file-1 4466,206067
+(defun helm-ff-file-cache-remove-file 4477,206461
+(defvar helm-source-file-name-history4486,206678
+(defvar helm-source--ff-file-name-history 4493,206941
+(defvar helm--file-name-history-hide-deleted 4497,207126
+(defun helm-file-name-history-show-or-hide-deleted 4499,207177
+(defvar helm-file-name-history-map4506,207426
+(defun helm-file-name-history-transformer 4513,207698
+(defun helm-ff-file-name-history-ff 4525,208331
+(defun helm-ff-file-name-history-run-ff 4529,208434
+(defun helm-ff-file-name-history 4535,208650
+(defvar helm--browse-project-cache 4575,210454
+(defvar helm-browse-project-map4578,210557
+(defun helm-browse-project-get-buffers 4584,210752
+(defun helm-browse-project-build-buffers-source 4596,211336
+(defun helm-browse-project-walk-directory 4604,211683
+(defun helm-browse-project-find-files-1 4610,211894
+(defun helm-browse-project-ag-find-files 4622,212365
+(defun helm-browse-project-rg-find-files 4627,212563
+(defun helm-browse-project-ag 4632,212761
+(defun helm-browse-project-run-ag 4637,212959
+(defclass helm-browse-project-override-inheritor 4644,213190
+(defclass helm-browse-project-source 4646,213261
+(defmethod helm--setup-source 4667,214190
+(defun helm-browse-project-find-files 4676,214596
+(defvar helm-browse-project-history 4696,215598
+(defun helm-projects-history 4699,215655
+(defun helm-browse-project 4711,216097
+(defun helm-browse-project-get--root-dir 4755,218110
+(defun helm-ff-browse-project 4763,218529
+(defun helm-ff-run-browse-project 4769,218752
+(defun helm-ff-gid 4775,218935
+(defun helm-ff-run-gid 4779,219044
+(defun helm-ff-find-sh-command 4786,219237
+(defun helm-ff-run-find-sh-command 4791,219392
+(defun helm-find-files 4800,219662
+(defun helm-delete-tramp-connection 4851,222729
+(defsubst helm--mapconcat-pinyin-pattern 4885,224785
+
+helm-files.el.bak,9564
+;; Copyright 3,81
+;; You should have received a copy of the GNU General Public License15,659
+;; along with this program.  If not,16,728
+;; along with this program.  If not, see <http:http16,728
+;;; Faces416,15368
+;; helm-tramp-file-name-regexp is based on old version of648,26310
+;; tramp-file-name-regexp i.e. "\\`/\\([^[/:]+\\|[^/]+]\\):" but it649,26368
+;; watch out!+]\651,26506
+;;; Helm-find-filesfiles663,27025
+    ;; hff otherwise the directory name is inserted o 779,32617
+    ;; hff otherwise the directory name is inserted on top before779,32617
+    ;; tramp starts and display candidates.  FNAME is here always a780,32683
+              ;; Using the car of *ff-history allow834,35210
+              ;; staying in the directory visited instead of835,35262
+         helm-ff-auto-update-initial-valuevalue874,37226
+         ;; It is not possible to rename a file to a boring name when875,37269
+         helm-ff-skip-boring-filesfiles877,37388
+                                  ;; If candidate is an url *-ff-default-directory is nil1057,44926
+                                  ;; Positional arguments may be double1071,45707
+          ;; i.e `eshell-command' will use this thi1089,46792
+          ;; to avoid printing in current-buffer.pri1092,46947
+                ;; If map have been set with C-u C-u (value == '(16))1096,47133
+                     ;; If command is an alias be sure it accept1103,47460
+          ;; This wont work on remote files, because tramp handlers depends1109,47736
+          ;; To work with tramp handler we have to call1118,48210
+          ;; COMMAND on basename of each file, using1119,48266
+                   ;; We can use basename here as the command will run1125,48564
+                                 ;; [1] This allow to enter other args AFTER filename1137,49357
+           ;; If files are not from start directory, use method1321,57810
+           (cl-loop with dirlist 1335,58640
+                                    (cond (;; Handle incremental1409,62657
+                                           ;; replacement with \# in1410,62722
+                                           ;; search and replace1411,62791
+                                          ;; Incremental replacement1421,63462
+                                          ;; Search and replace in1444,65185
+                                          ;; handle incremental ental1446,65318
+                                          ;; Replacement with1456,66083
+                                          ;; upcase, downcase or1457,66145
+                                          ((string=1459,66273
+                                          ;; Simple replacement with1462,66495
+               ;; If `regexp'regexp1466,66756
+               ;; return `old' unmodified.fied.1468,66860
+  ;; This fix the emacs bug where "Emacs-Lisp:" is sent1487,67937
+  ;; STR when REGEXP is specified as substring e.g %:1:3 e.g %:1:31495,68279
+  ;; STR when REGEXP is specified as substring e.g %:1:3 in this case1495,68279
+  ;; substring from 1 to 3 in STR will be enclosed with parenthesis to1496,68349
+  ;; match this substring as a subexp e.g %:1:3 on string "emacs" will1497,68420
+  ;; be replaced by "e\\(ma\\)cs" using subexp 1 like this:this1498,68491
+  ;; (helm--replace-regexp-in-buffer-string "e\\(ma\\)cs" "fo" "emacs" nil t 1499,68551
+  ;; Where "1" and "3" will be strings extracted with match-stringstring1502,68660
+  ;; from regexp and refered respectively in this function as REP1 and1503,68727
+             ;; Allows exiting with default action when a prefix arg1601,72803
+                                  helm-locate-fuzzy-matchmatch1821,80305
+                                  ;; in everything (es).efix 1823,80438
+  ;; This is the old version of helm-reduce-file-name, we still use it1982,86607
+  ;; with ftp fnames as expand-file-name is not working as expected1983,86678
+  ;; it. It works with local files and remote files as well but not1992,87116
+        ;; When going up one level we want to be at the line2033,88725
+        ;; corresponding to actual directory, so store this info2034,88786
+         ;; `helm-read-file-name' history. 2105,92326
+                   ;; Prevent dired commands moving to first real2109,92513
+                               ;; Only one non--existing candidate2155,94890
+                               ;; and one directory candidate, move to it,2156,94957
+                               ;; instead of `helm-next-line' (Issue #91(Issue #92160,95228
+                              ;; Issue 2165,95564
+                              ;; File predicates are returning t2166,95608
+                              ;; with paths like 2167,95673
+                              ;; So check it is not the case by regexp2168,95734
+                              ;; to allow user to do C-a / to start e.gg2169,95805
+                         (string=2174,96143
+                      ;; Only one candidate remaining2181,96526
+                      lt2-pp2183,96638
+                     ;; Maybe we are here because completed-p is true2190,96984
+                ;; If after going to next line the candidate2193,97171
+                ;; and only one candidate is remaining 2195,97281
+                ;; that mean we have entered the last letter of the directory name2199,97542
+                ;; in prompt, so expansion is already done, just add the "/" at end2200,97625
+  ;; Issue #1844 - If user enter "~/." to type an hidden filename2247,100358
+  ;; (exp(ex2249,100460
+  ;; [Windows] On UNC paths "/" expand to current machine,2255,100729
+         ;; avoid Issue #2004.s-do2261,101075
+  ;; takes only 5 args in emacs-2acs-2334,104429
+         ;; whereas in 24.5 it returnetur2337,104571
+         ;; whereas in 24.5 it returns a vector, thus the car is a2337,104571
+  ;; FIXME this will not work with a directory or a file named like2375,106188
+  ;; "ssh:foo" and located at root (/) but it seems there is no real2376,106256
+  ;; is matching helm-tramp-file-name-regexp;regexp2378,106395
+  ;; is matching helm-tramp-file-name-regexp; This would prevent usage2378,106395
+                                           ;; On emacs-27 host may be2404,107961
+               (helm-ff--invalid-tramp-name-p)p2421,108879
+             (string=2520,113383
+                 ;; If PATH is a valid directory IT=2527,113709
+                 ;; else IT=2528,113767
+      ;; to write a non--existing ting2531,113911
+      ;; to write a non--existing path in minibuffer2531,113911
+      (setq invalid-basedir t)2533,114029
+      (setq helm-ff-auto-update-flag flag2539,114358
+            ;; Unless auto update is disabled start auto updating only2540,114402
+                        ;; deletingtin2544,114622
+                             ;; Add the final "/" to path2555,115204
+               (prog22575,116279
+                   ;; Set it here to here t2577,116366
+                   ;; "Invalid tramp file name" and set  set2578,116442
+                   ;; "Invalid tramp file name" and set the candidates list2578,116442
+                   (setq helm-pattern path)2581,116666
+                   ;; "Invalid tramp file name" is now printed2582,116710
+                                 ;; file before adding it to2603,117909
+                                 ;; candidates, it was previously done2604,117970
+                                 ;; in the sort function but this2605,118041
+                                 ;; create a bug with remote files2606,118107
+                                 ;; when path is at the same time a2607,118174
+                                 ;; pattern matching a candidate and a2608,118242
+                                 ;; real candidate e.g. ack and2609,118313
+                                 ;; ack-grep in /usr/bin. This is due2610,118377
+                                 ;; presumably to a latency more2611,118447
+                                 ;; important with remote files which2612,118512
+                                 ;; lead to a confusion with the2613,118582
+                                 ;; pattern matching one candidate and2614,118647
+                                 ;; the real candidate which is same2615,118718
+                                 (file-exists-p path)2617,118835
+                                 ;; disabled, whe don't want PATH tATH 2619,118966
+                                 ;; if it is a directoect2620,119051
+  ;; NOTE: `file-name-all-completions' and `directory-files' and most2659,120743
+  ;; the displayed files willwil2661,120882
+  ;; the displayed files will be plain wrong in this case, even worst2661,120882
+                  ;; -A remove dot files, -F append [*=@|/>] at eof2687,122140
+                  ;; and -Q quote the real filename.  If not using -Q,Q2688,122208
+                  ;; that we need an extra step to remove the quotes2693,122557
+                 ;; seem broken on emacs for Windows systems s2733,124358
+                 ;; This should never be called on GNU/Linux/UnixUnix2734,124439
+                 ;; as the error is properly intercepted in2735,124505
+  (cl-loop with bad 2750,125207
+    ;; Always regexp-quote base directory name to handle2777,126473
+           ;; Fix Issue #541 when BD have a subdir similar2783,126715
+           ;; which will ill2785,126824
+       (regexp-quote pattern)2788,126969
+           (string-match "/$" pattern)2797,127474
+       ;; (e.g(e.2801,127705
+
+helm-files.elc,87
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file contains utf-8 non-ASCII characters,6,77
+
+helm-find.el,395
+(defcustom helm-findutils-skip-boring-files 23,862
+(defcustom helm-findutils-search-full-path 28,998
+(defcustom helm-find-noerrors 34,1214
+(defvar helm-find-map39,1352
+(defvar helm-source-findutils45,1537
+(defun helm-findutils-transformer 59,2103
+(defun helm-find--build-cmd-line 79,3108
+(defun helm-find-shell-command-fn 109,4669
+(defun helm-find-1 130,5508
+(defun helm-find 142,5828
+
+helm-find.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-font.el,1538
+(defgroup helm-font 25,868
+(defcustom helm-ucs-recent-size 29,960
+(defcustom helm-ucs-actions34,1070
+(defvar helm-ucs-map45,1565
+(defface helm-ucs-char55,1990
+(defvar helm-xfonts-cache 63,2166
+(defvar helm-previous-font 64,2197
+(defvar helm-source-xfonts65,2229
+(defvar helm-ucs--max-len 92,3373
+(defvar helm-ucs--names 93,3404
+(defvar helm-ucs-history 94,3433
+(defvar helm-ucs-recent 95,3463
+(defun helm-calculate-ucs-alist-max-len 98,3535
+(defun helm-calculate-ucs-hash-table-max-len 105,3851
+(defun helm-calculate-ucs-max-len 113,4225
+(defun helm-ucs-collect-symbols-alist 120,4504
+(defun helm-ucs-collect-symbols-hash-table 144,5578
+(defun helm-ucs-collect-symbols 165,6471
+(defun helm-ucs-init 174,6793
+(defun helm-ucs-match 186,7125
+(defun helm-ucs-save-recentest 194,7402
+(defun helm-ucs-insert 201,7642
+(defun helm-ucs-insert-char 207,7828
+(defun helm-ucs-insert-code 211,7950
+(defun helm-ucs-insert-name 215,8072
+(defun helm-ucs-kill-char 220,8210
+(defun helm-ucs-kill-code 229,8554
+(defun helm-ucs-kill-name 233,8674
+(defun helm-ucs-forward-char 239,8840
+(defun helm-ucs-backward-char 243,8934
+(defun helm-ucs-delete-backward 247,9030
+(defun helm-ucs-insert-space 251,9127
+(defun helm-ucs-persistent-forward 255,9217
+(defun helm-ucs-persistent-backward 262,9454
+(defun helm-ucs-persistent-delete 269,9688
+(defun helm-ucs-persistent-insert-space 276,9924
+(defvar helm-source-ucs-recent282,10128
+(defvar helm-source-ucs290,10355
+(defun helm-select-xfont 305,10905
+(defun helm-ucs 312,11084
+
+helm-font.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-for-files.el,1021
+(defcustom helm-multi-files-toggle-locate-binding 24,887
+(defcustom helm-for-files-preferred-list29,1059
+(defcustom helm-for-files-tramp-not-fancy 43,1511
+(defclass helm-file-cache 55,1746
+(defun helm-file-cache-get-candidates 58,1867
+(defvar helm-source-file-cache 64,2103
+(defcustom helm-file-cache-fuzzy-match 66,2140
+(cl-defun helm-file-cache-add-directory-recursively77,2557
+(defun helm-transform-file-cache 88,2934
+(defvar helm-recentf--basename-flag 99,3272
+(defun helm-recentf-pattern-transformer 101,3314
+(defcustom helm-turn-on-recentf 113,3828
+(defclass helm-recentf-source 118,3957
+(defmethod helm--setup-source 131,4627
+(defvar helm-source-recentf 139,5038
+(defcustom helm-recentf-fuzzy-match 143,5190
+(defun helm-highlight-files 158,5667
+(defclass helm-files-in-current-dir-source 201,7888
+(defvar helm-source-files-in-current-dir215,8632
+(defun helm-for-files 220,8782
+(defun helm-multi-files-toggle-to-locate 233,9269
+(defun helm-multi-files 251,10023
+(defun helm-recentf 293,11919
+
+helm-for-files.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-grep.el,4887
+(defgroup helm-grep 37,1338
+(defcustom helm-grep-default-command41,1433
+(defcustom helm-grep-default-recurse-command104,4080
+(defcustom helm-default-zgrep-command111,4359
+(defcustom helm-pdfgrep-default-command121,4724
+(defcustom helm-pdfgrep-default-recurse-command129,5013
+(defcustom helm-pdfgrep-default-read-command 137,5319
+(defcustom helm-grep-max-length-history 149,5691
+(defcustom helm-zgrep-file-extension-regexp154,5833
+(defcustom helm-grep-preferred-ext 160,6010
+(defcustom helm-grep-save-buffer-name-no-confirm 165,6142
+(defcustom helm-grep-ignored-files170,6286
+(defcustom helm-grep-ignored-directories179,6654
+(defcustom helm-grep-truncate-lines 185,6852
+(defcustom helm-grep-file-path-style 190,6992
+(defcustom helm-grep-actions201,7462
+(defcustom helm-grep-pipe-cmd-switches 211,7826
+(defcustom helm-grep-ag-pipe-cmd-switches 226,8399
+(defcustom helm-grep-input-idle-delay 235,8733
+(defgroup helm-grep-faces 245,8975
+(defface helm-grep-match251,9109
+(defface helm-grep-file258,9351
+(defface helm-grep-lineno264,9515
+(defface helm-grep-finish269,9654
+(defface helm-grep-cmd-line274,9789
+(defvar helm-grep-map283,9969
+(defcustom helm-grep-use-ioccur-style-keys 295,10511
+(defvar helm-pdfgrep-map310,11128
+(defvar helm-grep-mode-map319,11458
+(defvar helm-rzgrep-cache 337,12250
+(defvar helm-grep-default-function 338,12308
+(defvar helm-zgrep-recurse-flag 339,12360
+(defvar helm-grep-history 340,12397
+(defvar helm-grep-ag-history 341,12428
+(defvar helm-grep-last-targets 342,12462
+(defvar helm-grep-include-files 343,12498
+(defvar helm-grep-in-recurse 344,12535
+(defvar helm-grep-use-zgrep 345,12569
+(defvar helm-grep-default-directory-fn 346,12602
+(defvar helm-pdfgrep-targets 349,12787
+(defvar helm-grep-last-cmd-line 350,12821
+(defvar helm-grep-split-line-regexp 351,12858
+(defun helm-grep-prepare-candidates 357,12971
+(defun helm-grep-command 420,16798
+(cl-defun helm-grep-use-ack-p 429,17153
+(defun helm-grep--pipe-command-for-grep-command 442,17781
+(defun helm-grep--prepare-cmd-line 454,18298
+(defun helm-grep-init 514,21399
+(defun helm-grep-collect-candidates 596,25828
+(defun helm-grep-action 608,26180
+(defun helm-grep-persistent-action 663,29061
+(defun helm-grep-other-window 669,29268
+(defun helm-grep-other-frame 673,29408
+(defun helm-goto-next-or-prec-file 677,29545
+(defun helm-goto-precedent-file 721,31573
+(defun helm-goto-next-file 730,31823
+(defun helm-grep-run-default-action 736,31981
+(defun helm-grep-run-other-window-action 743,32213
+(defun helm-grep-run-other-frame-action 750,32471
+(defun helm-grep-run-save-buffer 757,32725
+(defun helm-grep-save-results 768,32989
+(defun helm-grep-save-results-1 771,33070
+(defun helm-grep-mode-mouse-jump 820,35515
+(define-derived-mode helm-grep-mode830,35858
+(defun helm-grep-mode--revert-buffer-function 842,36280
+(defun helm-grep-mode--sentinel 856,36923
+(defun helm-gm-next-file 876,37923
+(defun helm-gm-precedent-file 880,38003
+(defun helm-grep-mode-jump 884,38089
+(defun helm-grep-mode-jump-other-window-1 890,38244
+(defun helm-grep-mode-jump-other-window-forward 903,38749
+(defun helm-grep-mode-jump-other-window-backward 907,38868
+(defun helm-grep-mode-jump-other-window 911,38992
+(defun helm-grep-hack-types 923,39300
+(defun helm-grep-ack-types-transformer 943,40253
+(defvar helm-grep-ack-types-cache 950,40454
+(defun helm-grep-read-ack-type 951,40493
+(defun helm-grep-guess-extensions 970,41145
+(defun helm-grep-get-file-extensions 990,42102
+(defvar helm-grep-before-init-hook 1012,43113
+(defvar helm-grep-after-init-hook 1015,43215
+(defclass helm-grep-class 1018,43315
+(defvar helm-source-grep 1045,44468
+(defmethod helm--setup-source 1047,44499
+(cl-defun helm-do-grep-1 1056,44847
+(defun helm-ff-zgrep-1 1147,48951
+(defun helm-grep-split-line 1169,49759
+(defun helm-grep--filter-candidate-1 1180,50237
+(defun helm-grep-filter-one-by-one 1214,52032
+(defun helm-grep-highlight-match 1228,52662
+(defun helm-grep-buffers-1 1260,54023
+(defun helm-grep-buffers 1295,55627
+(defun helm-zgrep-buffers 1299,55728
+(defvar helm-pdfgrep-default-function 1308,55972
+(defun helm-pdfgrep-init 1309,56030
+(defun helm-do-pdfgrep-1 1353,58199
+(defun helm-pdfgrep-action 1386,59813
+(defun helm-pdfgrep-action-1 1389,59890
+(defcustom helm-grep-ag-command1402,60314
+(defun helm-grep--ag-command 1434,61542
+(defun helm-grep-ag-get-types 1438,61664
+(defun helm-grep-ag-prepare-cmd-line 1456,62463
+(defun helm-grep-ag-init 1477,63569
+(defclass helm-grep-ag-class 1540,66833
+(defvar helm-source-grep-ag 1557,67545
+(defmethod helm--setup-source 1559,67579
+(defun helm-grep-ag-1 1566,67851
+(defun helm-grep-ag 1582,68618
+(defvar helm-source-grep-git 1599,69199
+(defcustom helm-grep-git-grep-command1601,69234
+(defun helm-grep-git-1 1617,69891
+(defun helm-do-grep-ag 1637,70892
+(defun helm-grep-do-git-grep 1645,71175
+
+helm-grep.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-help.el,1316
+(defgroup helm-help 22,823
+(defface helm-helper26,894
+(defvar helm-help--string-list 31,1013
+(defvar helm-documentation-buffer-name 52,2185
+(defun helm-documentation 55,2265
+(defvar helm-buffer-help-message79,2921
+(defvar helm-ff-help-message233,9163
+(defvar helm-file-name-history-help-message1051,43999
+(defun helm-read-file-name-help-message 1067,44433
+(defvar helm-generic-file-help-message1164,48092
+(defvar helm-grep-help-message1230,50879
+(defvar helm-pdfgrep-help-message1339,54813
+(defvar helm-etags-help-message1351,55077
+(defvar helm-ucs-help-message1363,55333
+(defvar helm-bookmark-help-message1382,55809
+(defvar helm-esh-help-message1395,56174
+(defvar helm-buffers-ido-virtual-help-message1469,57987
+(defvar helm-moccur-help-message1484,58436
+(defvar helm-top-help-message1563,61350
+(defvar helm-el-package-help-message1576,61667
+(defvar helm-M-x-help-message1634,64002
+(defvar helm-imenu-help-message1665,65132
+(defvar helm-colors-help-message1676,65347
+(defvar helm-semantic-help-message1689,65684
+(defvar helm-kmacro-help-message1698,65798
+(defvar helm-kill-ring-help-message1719,66330
+(defun helm-comp-read-help-message 1769,68781
+(defvar helm-comp-read-mode-line 1799,69747
+(defvar helm-read-file-name-mode-line-string 1811,70051
+(defvar helm-top-mode-line 1824,70430
+
+helm-help.elc,87
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file contains utf-8 non-ASCII characters,6,77
+
+helm-id-utils.el,271
+(defgroup helm-id-utils 23,857
+(defcustom helm-gid-program 27,960
+(defcustom helm-gid-db-file-name 36,1318
+(defun helm-gid-candidates-process 41,1469
+(defun helm-gid-filtered-candidate-transformer 73,3099
+(defclass helm-gid-source 78,3338
+(defun helm-gid 103,4361
+
+helm-id-utils.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-imenu.el,1355
+(defgroup helm-imenu 30,972
+(defcustom helm-imenu-delimiter 34,1069
+(defcustom helm-imenu-execute-action-at-once-if-one39,1210
+(defcustom helm-imenu-all-buffer-assoc 45,1395
+(defcustom helm-imenu-in-all-buffers-separate-sources 54,1803
+(defcustom helm-imenu-type-faces67,2360
+(defcustom helm-imenu-extra-modes 81,3018
+(defvar helm-imenu-map87,3182
+(defcustom helm-imenu-lynx-style-map 94,3419
+(defun helm-imenu-next-or-previous-section 107,3929
+(defun helm-imenu-next-section 124,4574
+(defun helm-imenu-previous-section 128,4668
+(defvar helm-cached-imenu-alist 134,4783
+(defvar helm-cached-imenu-candidates 137,4875
+(defvar helm-cached-imenu-tick 140,4977
+(defvar helm-imenu--in-all-buffers-cache 143,5067
+(defvar helm-source-imenu 145,5115
+(defvar helm-source-imenu-all 146,5176
+(defclass helm-imenu-source 148,5212
+(defcustom helm-imenu-fuzzy-match 159,5672
+(defun helm-imenu--maybe-switch-to-buffer 169,5999
+(defun helm-imenu--execute-action-at-once-p 174,6175
+(defun helm-imenu-action 186,6529
+(defun helm-imenu-persistent-action 199,7019
+(defun helm-imenu-candidates 205,7225
+(defun helm-imenu-candidates-in-all-buffers 217,7770
+(defun helm-imenu--candidates-1 244,9134
+(defun helm-imenu--get-prop 272,10590
+(defun helm-imenu-transformer 285,11054
+(defun helm-imenu 312,12299
+(defun helm-imenu-in-all-buffers 333,13087
+
+helm-imenu.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-info.el,782
+(defgroup helm-info 34,1176
+(defcustom helm-info-default-sources38,1271
+(cl-defun helm-info-init 50,1632
+(defun helm-info-goto 84,3155
+(defun helm-info-display-to-real 88,3261
+(defclass helm-info-source 95,3625
+(defmacro helm-build-info-source 104,3967
+(defun helm-build-info-index-command 108,4122
+(defun helm-define-info-index-sources 120,4549
+(defun helm-info-index-set 133,5214
+(defvar helm-info-searched 142,5471
+(defun helm-get-info-files 145,5559
+(defcustom helm-default-info-index-list162,6284
+(defun helm-info-search-index 169,6481
+(defun helm-def-source--info-files 178,6823
+(defun helm-info 191,7232
+(defvar helm-info--pages-cache 220,8395
+(defvar helm-source-info-pages223,8476
+(defun helm-info-pages-init 234,8858
+(defun helm-info-at-point 248,9387
+
+helm-info.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-locate.el,1430
+(defgroup helm-locate 30,1031
+(defcustom helm-locate-db-file-regexp 34,1130
+(defcustom helm-ff-locate-db-filename 40,1298
+(defcustom helm-locate-command 49,1686
+(defcustom helm-locate-create-db-command79,2780
+(defcustom helm-locate-case-fold-search 85,2947
+(defcustom helm-locate-fuzzy-match 96,3390
+(defcustom helm-locate-fuzzy-sort-fn102,3576
+(defcustom helm-locate-project-list 108,3745
+(defcustom helm-locate-recursive-dirs-command 115,3984
+(defvar helm-locate-map130,4512
+(defface helm-locate-finish136,4700
+(defun helm-ff-find-locatedb 142,4845
+(defun helm-locate-create-db-default-function 154,5374
+(defvar helm-locate-create-db-function161,5685
+(defun helm-locate-1 167,5904
+(defun helm-locate-set-command 210,8206
+(defun helm-locate-initial-setup 220,8555
+(defvar helm-file-name-history 224,8649
+(defun helm-locate-with-db 225,8685
+(defun helm-locate-update-mode-line 265,10547
+(defun helm-locate-init 280,11201
+(defun helm-locate-default-fuzzy-sort-fn 334,13909
+(defclass helm-locate-override-inheritor 339,14119
+(defclass helm-locate-source 341,14182
+(defmethod helm--setup-source 352,14690
+(defvar helm-source-locate355,14824
+(defun helm-locate-pattern-transformer 367,15368
+(defun helm-locate-find-dbs-in-projects 383,16068
+(defclass helm-locate-subdirs-source 402,16861
+(defun helm-locate-init-subdirs 412,17171
+(defun helm-projects-find-files 426,17615
+(defun helm-locate 440,18184
+
+helm-locate.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-man.el,294
+(defgroup helm-man 35,1390
+(defcustom helm-man-or-woman-function 39,1471
+(defcustom helm-man-format-switches 46,1756
+(defvar helm-man--pages 55,2081
+(defun helm-man-default-action 60,2208
+(defun helm-man--init 81,3220
+(defvar helm-source-man-pages92,3660
+(defun helm-man-woman 103,4016
+
+helm-man.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-misc.el,1125
+(defgroup helm-misc 31,1134
+(defcustom helm-time-zone-home-location 35,1224
+(defcustom helm-timezone-actions40,1341
+(defface helm-time-zone-current47,1593
+(defface helm-time-zone-home52,1741
+(defun helm-latex-math-candidates 89,2358
+(defvar helm-source-latex-math98,2732
+(defun helm-jabber-online-contacts 110,3094
+(defvar helm-source-jabber-contacts120,3411
+(defun helm-time-zone-transformer 135,3879
+(defvar helm-source-time-world147,4366
+(defun helm-call-interactively 174,5604
+(defvar helm-minibuffer-history-map191,6238
+(defcustom helm-minibuffer-history-must-match 197,6422
+(defvar helm-source-ratpoison-commands209,6726
+(defun helm-ratpoison-commands-init 217,7057
+(defun helm-ratpoison-commands-display-to-real 232,7686
+(defun helm-ratpoison-commands-execute 236,7822
+(defvar helm-source-stumpwm-commands242,7958
+(defun helm-stumpwm-commands-init 249,8219
+(defun helm-stumpwm-commands-execute 259,8596
+(defun helm-world-time 263,8713
+(defun helm-insert-latex-math 270,8947
+(defun helm-ratpoison-commands 276,9132
+(defun helm-stumpwm-commands(283,9358
+(defun helm-minibuffer-history 290,9566
+
+helm-misc.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-mode.el,3240
+(defgroup helm-mode 31,1013
+(defcustom helm-completing-read-handlers-alist35,1082
+(defcustom helm-comp-read-case-fold-search 131,4934
+(defcustom helm-mode-handle-completion-in-region 137,5155
+(defcustom helm-mode-no-completion-in-region-in-modes 144,5400
+(defcustom helm-mode-reverse-history 149,5567
+(defcustom helm-completion-in-region-default-sort-fn156,5752
+(defcustom helm-mode-fuzzy-match 169,6244
+(defcustom helm-completion-mark-suffix 180,6699
+(defvar helm-mode-minibuffer-setup-hook-black-list 185,6824
+(defface helm-mode-prefix191,7178
+(defvar helm-comp-read-map196,7315
+(defun helm-mode-delete-char-backward-1 204,7583
+(defun helm-mode-delete-char-backward-2 215,8006
+(defcustom helm-completion-style 235,8914
+(defconst helm-completion--all-styles279,10829
+(defconst helm-completion--styles-type286,11074
+(defcustom helm-completion-styles-alist 291,11280
+(defun helm-cr-empty-string 318,12398
+(defun helm-mode--keyboard-quit 327,12620
+(cl-defun helm-comp-read-get-candidates 333,12802
+(defun helm-cr--pattern-in-candidates-p 433,17992
+(defun helm-cr-default-transformer 440,18269
+(defun helm-comp-read--move-to-first-real-candidate 478,20009
+(defun helm-cr-default 483,20202
+(cl-defun helm-comp-read 499,20877
+(defvar helm-completion-mode-string 795,33719
+(defvar helm-completion-mode-quit-message797,33765
+(defvar helm-completion-mode-start-message800,33838
+(defun helm-completing-read-symbols806,33942
+(defun helm-completing-read-default-1839,35146
+(defun helm-completing-read-default-2882,36966
+(defun helm-completing-read-default-find-tag981,41839
+(defun helm-completing-read-sync-default-handler996,42600
+(defun helm-completing-read-inbuffer-default-handler1005,43000
+(defun helm-completing-read-default-handler1014,43410
+(defun helm--generic-read-buffer 1029,44032
+(cl-defun helm--completing-read-default1036,44347
+(cl-defun helm-read-file-name1139,49509
+(defun helm-mode--default-filename 1312,56503
+(cl-defun helm--generic-read-file-name1326,57046
+(defun helm-read-file-name-handler-1 1425,61968
+(defun helm-mode--advice-lisp--local-variables 1454,63064
+(defvar helm-completion--sorting-done 1458,63177
+(defun helm-completion-in-region-sort-fn 1460,63299
+(defun helm-mode--completion-in-region-initial-input 1466,63513
+(defun helm-completion-in-region--initial-filter 1472,63785
+(defun helm-completion-try-completion 1501,64799
+(defun helm-completion-all-completions 1513,65447
+(defun helm-completion--multi-all-completions-1 1520,65805
+(defun helm-completion--multi-all-completions 1576,69029
+(defun helm-completion--adjust-metadata 1588,69656
+(defun helm-flex-completion-try-completion 1604,70224
+(defun helm-flex-completion-all-completions 1615,70800
+(defun helm-flex-add-score-as-prop 1627,71401
+(defun helm-completion--flex-transform-pattern 1632,71613
+(defun helm-completion--flex-all-completions1641,71966
+(defun helm-completion-in-region--selection 1663,73079
+(defun helm--completion-in-region 1669,73250
+(defun helm-completion-in-region--insert-result 1843,84083
+(defun helm-mode--in-file-completion-p 1868,85172
+(defun helm-mode--disable-ido-maybe 1872,85314
+(defun helm-mode--ido-everywhere-hook 1881,85790
+(define-minor-mode helm-mode1888,85992
+
+helm-mode.elc,26
+  function for 164,19592
+
+helm-net.el,2209
+(defgroup helm-net 28,922
+(defcustom helm-google-suggest-default-browser-function 32,1015
+(defcustom helm-home-url 39,1275
+(defcustom helm-surfraw-default-browser-function 44,1398
+(defcustom helm-google-suggest-url50,1601
+(defcustom helm-google-suggest-search-url57,1838
+(defvaralias 'helm-google-suggest-use-curl-p helm-google-suggest-use-curl-p64,2063
+(defcustom helm-net-prefer-curl 67,2219
+(defcustom helm-surfraw-duckduckgo-url73,2400
+(defcustom helm-search-suggest-action-wikipedia-url82,2706
+(defcustom helm-search-suggest-action-youtube-url89,2932
+(defcustom helm-search-suggest-action-imdb-url96,3152
+(defcustom helm-search-suggest-action-google-maps-url103,3349
+(defcustom helm-search-suggest-action-google-news-url110,3573
+(defcustom helm-google-suggest-actions117,3826
+(defcustom helm-browse-url-firefox-new-window 143,5051
+(defcustom helm-net-curl-switches 151,5349
+(defun helm-search-suggest-perform-additional-action 161,5577
+(defun helm-net--url-retrieve-sync 165,5751
+(defun helm-google-suggest-parser 178,6098
+(defun helm-google-suggest-fetch 187,6412
+(defun helm-google-suggest-set-candidates 194,6684
+(defun helm-ggs-set-number-result 210,7400
+(defun helm-google-suggest-action 225,7902
+(defvar helm-google-suggest-default-function233,8230
+(defvar helm-source-google-suggest237,8367
+(defun helm-google-suggest-emacs-lisp 246,8643
+(defvar helm-browse-url-chromium-program 258,8985
+(defvar helm-browse-url-uzbl-program 259,9046
+(defvar helm-browse-url-conkeror-program 260,9099
+(defvar helm-browse-url-opera-program 261,9152
+(defvar helm-browse-url-default-browser-alist262,9199
+(cl-defun helm-generic-browser 280,10141
+(defun helm-browse-url-firefox 293,10590
+(defun helm-browse-url-opera 311,11279
+(defun helm-browse-url-chromium 327,11902
+(defun helm-browse-url-uzbl 334,12108
+(defun helm-browse-url-conkeror 340,12299
+(defun helm-browse-url-default-browser 345,12482
+(defun helm-browse-url 354,12890
+(defvar helm-surfraw-engines-history 367,13180
+(defvar helm-surfraw-input-history 368,13222
+(defvar helm-surfraw--elvi-cache 369,13262
+(defun helm-build-elvi-list 371,13301
+(defun helm-surfraw 380,13641
+(defun helm-google-suggest 418,15298
+
+helm-net.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-occur.el,2130
+(defvar helm-source-occur 28,906
+(defvar helm-source-moccur 29,937
+(defvar helm-occur--buffer-list 32,1093
+(defvar helm-occur--buffer-tick 33,1130
+(defvar helm-occur-history 34,1167
+(defvar helm-occur--search-buffer-regexp 35,1199
+(defvar helm-occur-mode--last-pattern 37,1348
+(defvar helm-occur-map40,1394
+(defgroup helm-occur 49,1735
+(defcustom helm-occur-actions53,1833
+(defcustom helm-occur-use-ioccur-style-keys 63,2191
+(defcustom helm-occur-always-search-in-current 79,2831
+(defcustom helm-occur-truncate-lines 84,2990
+(defcustom helm-occur-auto-update-on-resume 89,3118
+(defcustom helm-occur-candidate-number-limit 102,3795
+(defcustom helm-occur-buffer-substring-fn-for-modes107,3945
+(defface helm-moccur-buffer120,4515
+(defface helm-resume-need-update125,4667
+(defun helm-occur 132,4829
+(defun helm-occur-transformer 181,7180
+(defclass helm-moccur-class 196,7877
+(defun helm-occur-build-sources 202,8079
+(defun helm-multi-occur-1 256,10768
+(cl-defun helm-occur-action 287,12185
+(defun helm-occur-goto-line 313,13445
+(defun helm-occur-goto-line-ow 318,13589
+(defun helm-occur-goto-line-of 324,13787
+(defun helm-occur-run-goto-line-ow 330,13978
+(defun helm-occur-run-goto-line-of 337,14221
+(defun helm-occur-run-default-action 344,14461
+(defun helm-occur-run-save-buffer 350,14648
+(defun helm-occur-right 357,14888
+(defvar helm-occur-mode-map372,15299
+(defun helm-occur-mode-goto-line 387,16121
+(defun helm-occur-mode-goto-line-ow 392,16302
+(defun helm-occur-mode-goto-line-ow-forward-1 397,16489
+(defun helm-occur-mode-goto-line-ow-forward 408,16869
+(defun helm-occur-mode-goto-line-ow-backward 412,16988
+(defun helm-occur-save-results 416,17112
+(defun helm-occur-mode-mouse-goto-line 481,20109
+(defun helm-occur-mode-resume-session 491,20472
+(defun helm-occur-buffer-substring-with-linums 496,20698
+(defun helm-occur-mode--revert-buffer-function 512,21333
+(defun helm-occur-filter-one-by-one 569,24066
+(define-derived-mode helm-occur-mode588,24757
+(defun helm-occur-resume-fn 605,25287
+(defun helm-occur-from-isearch 660,28079
+(defun helm-multi-occur-from-isearch 673,28450
+
+helm-occur.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-pkg.el,28
+(define-package "helm" 1,0
+
+helm-regexp.el,415
+(defgroup helm-regexp 28,977
+(defvar helm-build-regexp-history 35,1095
+(defun helm-query-replace-regexp 37,1135
+(defun helm-kill-regexp-as-sexp 45,1479
+(defun helm-kill-regexp 50,1632
+(defun helm-query-replace-args 54,1751
+(defvar helm-source-regexp68,2320
+(defun helm-regexp-get-line 88,3102
+(defun helm-regexp-persistent-action 101,3590
+(defun helm-regexp-kill-new 105,3688
+(defun helm-regexp 115,3850
+
+helm-regexp.elc,217
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+With a prefix arg replace only matches surrounded by word boundaries,18,728
+
+helm-ring.el,1843
+(defgroup helm-ring 29,1025
+(defcustom helm-kill-ring-threshold 33,1120
+(defcustom helm-kill-ring-max-offset 38,1272
+(defcustom helm-kill-ring-actions49,1768
+(defcustom helm-kill-ring-separator 56,2024
+(defcustom helm-register-max-offset 61,2170
+(defvar helm-kill-ring-map69,2330
+(defvar helm-source-kill-ring81,2862
+(defun helm-kill-ring-candidates 98,3494
+(defun helm-kill-ring-transformer 107,3896
+(defvar helm-kill-ring--truncated-flag 114,4166
+(defun helm-kill-ring-toggle-truncated 115,4210
+(defun helm-kill-ring-kill-selection 130,4837
+(defun helm-kill-ring--preselect-fn 137,5097
+(defun helm-kill-ring-action-yank 149,5601
+(defun helm-kill-ring-action-yank-1 163,6187
+(define-obsolete-function-alias 'helm-kill-ring-action helm-kill-ring-action215,8922
+(defun helm-kill-ring-action-delete 217,9015
+(defun helm-kill-ring-persistent-delete 223,9231
+(defun helm-kill-ring-run-persistent-delete 236,9817
+(defun helm-kill-ring-delete 244,10142
+(defun helm-mark-ring-line-string-at-pos 259,10579
+(defun helm-mark-ring-get-candidates 270,10932
+(defun helm-mark-ring-default-action 285,11650
+(defvar helm-source-mark-ring301,12287
+(defvar helm-source-global-mark-ring309,12548
+(defun helm-global-mark-ring-format-buffer 316,12809
+(defun helm-global-mark-ring-get-candidates 329,13372
+(defvar helm-source-register343,13929
+(defun helm-register-candidates 359,14578
+(defun helm-register-action-transformer 427,17454
+(defun helm-mark-ring 463,19124
+(defun helm-global-mark-ring 471,19333
+(defun helm-all-mark-rings 479,19570
+(defun helm-register 489,19876
+(defun helm-show-kill-ring 497,20079
+(defun helm-execute-kmacro 511,20513
+(defun helm-kbd-macro-execute 547,21963
+(defun helm-kbd-macro-concat-macros 555,22232
+(defun helm-kbd-macro-delete-macro 570,22867
+(defun helm-kbd-macro-edit-macro 577,23091
+
+helm-ring.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-semantic.el,553
+(defgroup helm-semantic 34,1149
+(defcustom helm-semantic-display-style38,1257
+(defvar helm-semantic-map59,2119
+(defcustom helm-semantic-lynx-style-map 64,2229
+(defvar helm-semantic--tags-cache 78,2775
+(defun helm-semantic--fetch-candidates 80,2815
+(defun helm-semantic-default-action 119,4364
+(defun helm-semantic--maybe-set-needs-update 132,4925
+(defvar helm-source-semantic 137,5097
+(defclass helm-semantic-source 139,5132
+(defcustom helm-semantic-fuzzy-match 155,6026
+(defun helm-semantic 166,6393
+(defun helm-semantic-or-imenu 189,7375
+
+helm-semantic.elc,87
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file contains utf-8 non-ASCII characters,6,77
+
+helm-shell.el,123
+(defalias 'helm-shell-prompts helm-shell-prompts31,994
+(defalias 'helm-shell-prompts-all helm-shell-prompts-all34,1062
+
+helm-shell.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-sys.el,1783
+(defgroup helm-sys 26,895
+(defface helm-top-columns30,968
+(defcustom helm-top-command36,1094
+(defcustom helm-top-sort-columns-alist 60,2245
+(defcustom helm-top-poll-delay 71,2811
+(defcustom helm-top-poll-delay-post-command 77,3031
+(defcustom helm-top-poll-preselection 84,3239
+(defvar helm-top-sort-fn 96,3670
+(defvar helm-top-map97,3700
+(defvar helm-top-after-init-hook 106,4050
+(defvar helm-top--poll-timer 109,4118
+(defun helm-top-poll 111,4153
+(defun helm-top--poll-delay 138,5278
+(defun helm-top-poll-no-update 141,5343
+(defun helm-top-initialize-poll-hooks 145,5481
+(define-minor-mode helm-top-poll-mode158,6033
+(defvar helm-source-top169,6498
+(defvar helm-top--line 193,7517
+(defun helm-top-transformer 194,7545
+(defun helm-top--skip-top-line 206,8065
+(defun helm-top-action-transformer 215,8395
+(defun helm-top--marked-pids 242,9963
+(defun helm-top-sh 245,10066
+(defun helm-top-sh-persistent-action 252,10354
+(defun helm-top-init 256,10467
+(defun helm-top-display-to-real 265,10796
+(defun helm-top-set-mode-line 271,10917
+(defun helm-top-sort-transformer 276,11184
+(defun helm-top-sort-by-com 289,11643
+(defun helm-top-sort-by-mem 297,11914
+(defun helm-top-sort-by-cpu 305,12217
+(defun helm-top-sort-by-user 313,12520
+(defun helm-top--preselect-fn 321,12797
+(defun helm-top-run-sort-by-com 330,13095
+(defun helm-top-run-sort-by-cpu 336,13270
+(defun helm-top-run-sort-by-mem 344,13553
+(defun helm-top-run-sort-by-user 350,13728
+(defun helm-xrandr-info 362,13984
+(defun helm-xrandr-screen 376,14509
+(defun helm-xrandr-output 380,14603
+(defvar helm-source-xrandr-change-resolution384,14697
+(defvar helm-source-emacs-process409,15606
+(defun helm-top 426,16322
+(defun helm-list-emacs-process 439,16799
+(defun helm-xrandr-set 445,16976
+
+helm-sys.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-tags.el,1094
+(defgroup helm-tags 27,898
+(defcustom helm-etags-tag-file-name 31,993
+(defcustom helm-etags-tag-file-search-limit 36,1100
+(defcustom helm-etags-match-part-only 42,1291
+(defcustom helm-etags-execute-action-at-once-if-one 53,1723
+(defgroup helm-tags-faces 60,1894
+(defface helm-etags-file66,2034
+(defun helm-etags-run-switch-other-window 76,2215
+(defun helm-etags-run-switch-other-frame 85,2537
+(defvar helm-etags-map94,2855
+(defvar helm-etags-mtime-alist 104,3258
+(defvar helm-etags-cache 106,3352
+(defun helm-etags-get-tag-file 109,3472
+(defun helm-etags-all-tag-files 120,3955
+(defun helm-etags-find-tag-file-directory 132,4451
+(defun helm-etags-get-header-name 153,5423
+(defun helm-etags-create-buffer 159,5614
+(defun helm-etags-init 187,6996
+(defvar helm-source-etags-select 210,8045
+(defun helm-etags-build-source 213,8111
+(defcustom helm-etags-fuzzy-match 243,9544
+(defsubst helm-etags--file-from-tag 254,9831
+(defun helm-etags-action-goto 261,10061
+(defun helm-etags-mtime 283,11044
+(defun helm-etags-file-modified-p 287,11163
+(defun helm-etags-select 296,11479
+
+helm-tags.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-types.el,1507
+(defclass helm-type-file 29,966
+(defmethod helm-source-get-action-from-type 32,1048
+(defun helm-actions-from-type-file 35,1150
+(defvar helm-generic-files-map40,1319
+(defcustom helm-type-file-actions71,3061
+(defmethod helm--setup-source 104,5105
+(defmethod helm--setup-source 106,5173
+(defclass helm-type-bookmark 125,6022
+(defcustom helm-type-bookmark-actions128,6108
+(defmethod helm-source-get-action-from-type 144,6771
+(defmethod helm--setup-source 147,6877
+(defmethod helm--setup-source 149,6949
+(defclass helm-type-buffer 160,7440
+(defcustom helm-type-buffer-actions163,7521
+(defmethod helm-source-get-action-from-type 197,8881
+(defmethod helm--setup-source 200,8985
+(defmethod helm--setup-source 202,9055
+(defclass helm-type-function 213,9566
+(defcustom helm-type-function-actions216,9656
+(defmethod helm-source-get-action-from-type 232,10296
+(defun helm-actions-from-type-function 235,10402
+(defmethod helm--setup-source 240,10579
+(defmethod helm--setup-source 242,10651
+(defclass helm-type-command 252,11047
+(defun helm-actions-from-type-command 255,11135
+(defcustom helm-type-command-actions260,11310
+(defmethod helm--setup-source 269,11619
+(defmethod helm--setup-source 271,11690
+(defclass helm-type-timers 279,12082
+(defcustom helm-type-timers-actions282,12168
+(defmethod helm--setup-source 298,12938
+(defmethod helm--setup-source 300,13008
+(defun helm-build-type-file 309,13388
+(defun helm-build-type-function 312,13456
+(defun helm-build-type-command 315,13532
+
+helm-types.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-utils.el,2860
+(defgroup helm-utils 37,1364
+(defcustom helm-su-or-sudo 41,1439
+(defcustom helm-default-kbsize 46,1553
+(defcustom helm-highlight-matches-around-point-max-lines 57,1886
+(defcustom helm-buffers-to-resize-on-pa 62,2056
+(defcustom helm-resize-on-pa-text-height 67,2247
+(defcustom helm-sources-using-help-echo-popup 72,2399
+(defcustom helm-html-decode-entities-function 78,2689
+(defvar helm-goto-line-before-hook 89,3146
+(defvar helm-save-pos-before-jump-register 100,3735
+(defconst helm-html-entities-alist103,3861
+(defvar helm-find-many-files-after-hook 208,6967
+(defface helm-selection-line213,7080
+(defface helm-match-item218,7262
+(defcustom helm-window-prefer-horizontal-split 227,7428
+(defcustom helm-window-show-buffers-function 246,8136
+(defun helm-window-show-buffers 258,8684
+(defun helm-buffers-switch-to-buffer-or-tab 279,9566
+(defun helm-buffers--get-tab-from-name 297,10369
+(defun helm-buffers--buffer-in-tab-p 303,10607
+(defun helm-window-default-split-fn 310,10943
+(defun helm-window-alternate-split-fn 328,11717
+(defun helm-window-mosaic-fn 349,12664
+(defun helm-window-other-window 419,16491
+(cl-defun helm-current-buffer-narrowed-p 437,17398
+(defun helm-goto-char 447,17754
+(defun helm-goto-line 466,18488
+(defun helm-save-pos-to-register-before-jump 479,18954
+(defun helm-save-current-pos-to-mark-ring 486,19259
+(defun helm-show-all-candidates-in-source 494,19547
+(defun helm-display-all-sources 513,20354
+(defun helm-displaying-source-names 520,20578
+(defun helm-handle-winner-boring-buffers 530,20982
+(defun helm-quit-and-find-file 538,21366
+(defun helm-generic-sort-fn 621,25187
+(cl-defun helm-file-human-size 662,27217
+(cl-defun helm-file-attributes676,27909
+(defun helm-split-mode-file-attributes 766,32685
+(defun helm-format-columns-of-files 784,33393
+(defmacro with-helm-display-marked-candidates 791,33631
+(defvar helm-match-line-overlay 817,34656
+(defvar helm--match-item-overlays 818,34693
+(defun helm-highlight-current-line 820,34733
+(defun helm--translate-pcre-to-elisp 878,37593
+(defun helm-match-line-cleanup 898,38395
+(defun helm-match-line-cleanup-maybe 905,38636
+(defun helm-match-line-update 909,38739
+(defun helm-persistent-autoresize-hook 914,38886
+(defun helm-match-line-cleanup-pulse 920,39162
+(defvar helm--show-help-echo-timer 931,39657
+(defun helm-cancel-help-echo-timer 933,39698
+(defun helm-maybe-show-help-echo 938,39862
+(define-minor-mode helm-popup-tip-mode960,40799
+(defun helm-open-file-with-default-tool 971,41265
+(defun helm-open-dired 985,41867
+(defun helm-require-or-error 993,42107
+(defun helm-find-file-as-root 997,42242
+(defun helm-find-many-files 1014,42897
+(defun helm-read-repeat-string 1021,43192
+(defun helm-html-bookmarks-to-alist 1032,43618
+(defun helm-html-entity-to-string 1050,44382
+(defun helm-html-decode-entities-string 1059,44720
+
+helm-utils.elc,93588
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+(defconst helm-html-entities-alist '(("&quot;quot29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;gt29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;lt29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;amp29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;euro29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;Yuml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;iexcl29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;cent29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;pound29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;curren29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;brvbar29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;sect29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;uml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;copy29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;ordf29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;laquo29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;not29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;masr29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;deg29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;plusmn29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;sup229,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;sup329,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;acute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;micro29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;para29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;middot29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;cedil29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;sup129,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;ordm29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;raquo29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;frac1429,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;frac1229,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;frac3429,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;iquest29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;Agrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;Aacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;Acirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;Atilde29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;Auml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;Aring29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;Ccedil29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;Egrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;Eacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;Ecirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;Euml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;Igrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;Iacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;Icirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;Iuml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;eth29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;Ntilde29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;Ograve29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;Oacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;Ocirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;Otilde29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;Ouml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;times29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;Oslash29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;Ugrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;Uacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;Ucirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;Uuml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;Yacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;thorn29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;szlig29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;agrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;aacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;acirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;atilde29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;auml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;aring29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;aelig29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;ccedil29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;egrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;eacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;ecirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;euml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;igrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;iacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;icirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;iuml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;eth29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;ntilde29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;ograve29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;oacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;ocirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;otilde29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;ouml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;divide29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;oslash29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;ugrave29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;uacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;" . 250) ("&ucirc;ucirc29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;" . 250) ("&ucirc;" . 251) ("&uuml;uuml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;" . 250) ("&ucirc;" . 251) ("&uuml;" . 252) ("&yacute;yacute29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;" . 250) ("&ucirc;" . 251) ("&uuml;" . 252) ("&yacute;" . 253) ("&thorn;thorn29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;" . 250) ("&ucirc;" . 251) ("&uuml;" . 252) ("&yacute;" . 253) ("&thorn;" . 254) ("&yuml;yuml29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;" . 250) ("&ucirc;" . 251) ("&uuml;" . 252) ("&yacute;" . 253) ("&thorn;" . 254) ("&yuml;" . 255) ("&reg;reg29,3358
+(defconst helm-html-entities-alist '(("&quot;" . 34) ("&gt;" . 62) ("&lt;" . 60) ("&amp;" . 38) ("&euro;" . 8364) ("&Yuml;" . 89) ("&iexcl;" . 161) ("&cent;" . 162) ("&pound;" . 163) ("&curren;" . 164) ("&yen" . 165) ("&brvbar;" . 166) ("&sect;" . 167) ("&uml;" . 32) ("&copy;" . 169) ("&ordf;" . 97) ("&laquo;" . 171) ("&not;" . 172) ("&masr;" . 174) ("&deg;" . 176) ("&plusmn;" . 177) ("&sup2;" . 50) ("&sup3;" . 51) ("&acute;" . 39) ("&micro;" . 956) ("&para;" . 182) ("&middot;" . 183) ("&cedil;" . 32) ("&sup1;" . 49) ("&ordm;" . 111) ("&raquo;" . 187) ("&frac14;" . 49) ("&frac12;" . 49) ("&frac34;" . 51) ("&iquest;" . 191) ("&Agrave;" . 192) ("&Aacute;" . 193) ("&Acirc;" . 194) ("&Atilde;" . 195) ("&Auml;" . 196) ("&Aring;" . 197) ("&Aelig" . 198) ("&Ccedil;" . 199) ("&Egrave;" . 200) ("&Eacute;" . 201) ("&Ecirc;" . 202) ("&Euml;" . 203) ("&Igrave;" . 204) ("&Iacute;" . 205) ("&Icirc;" . 206) ("&Iuml;" . 207) ("&eth;" . 208) ("&Ntilde;" . 209) ("&Ograve;" . 210) ("&Oacute;" . 211) ("&Ocirc;" . 212) ("&Otilde;" . 213) ("&Ouml;" . 214) ("&times;" . 215) ("&Oslash;" . 216) ("&Ugrave;" . 217) ("&Uacute;" . 218) ("&Ucirc;" . 219) ("&Uuml;" . 220) ("&Yacute;" . 221) ("&thorn;" . 222) ("&szlig;" . 223) ("&agrave;" . 224) ("&aacute;" . 225) ("&acirc;" . 226) ("&atilde;" . 227) ("&auml;" . 228) ("&aring;" . 229) ("&aelig;" . 230) ("&ccedil;" . 231) ("&egrave;" . 232) ("&eacute;" . 233) ("&ecirc;" . 234) ("&euml;" . 235) ("&igrave;" . 236) ("&iacute;" . 237) ("&icirc;" . 238) ("&iuml;" . 239) ("&eth;" . 240) ("&ntilde;" . 241) ("&ograve;" . 242) ("&oacute;" . 243) ("&ocirc;" . 244) ("&otilde;" . 245) ("&ouml;" . 246) ("&divide;" . 247) ("&oslash;" . 248) ("&ugrave;" . 249) ("&uacute;" . 250) ("&ucirc;" . 251) ("&uuml;" . 252) ("&yacute;" . 253) ("&thorn;" . 254) ("&yuml;" . 255) ("&reg;" . 174) ("&shy;shy29,3358
+
+helm-x-files.el,447
+(defun helm-files-in-all-dired-candidates 26,907
+(defclass helm-files-dired-source 36,1299
+(defvar helm-source-files-in-all-dired39,1433
+(defclass helm-source-session-class 47,1732
+(defvar helm-source-session 58,2270
+(defcustom helm-session-fuzzy-match 61,2338
+(defun helm-source-tracker-transformer 76,2741
+(defvar helm-source-tracker-search84,3151
+(defclass helm-mac-spotlight-source 108,4220
+(defvar helm-source-mac-spotlight115,4507
+
+helm-x-files.elc,140
+;ELCELC1,0
+;;; Compiled2,9
+;;; This file uses dynamic docstrings,6,77
+;;; This file does not contain utf-8 non-ASCII characters,8,145
+
+helm-easymenu.el,0

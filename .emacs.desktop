@@ -1,0 +1,103 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Feb 19 17:33:50 2020
+;; Desktop file format version 208
+;; Emacs version 26.3
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24141 254 834210 0) (desktop . "208") "admin@SAMUEL-SURFACE" nil nil ((((minibuffer . t) (undecorated) (skip-taskbar) (font-backend uniscribe gdi) (font . "-outline-CaskaydiaCove NF-normal-normal-normal-mono-26-*-*-*-c-*-iso8859-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#f6f3e8") (background-color . "#242424") (mouse-color . "OrangeRed") (border-color . "gold") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-focus-on-map) (no-accept-focus) (no-special-glyphs) (alpha) (menu-bar-lines . 1) (tool-bar-lines . 0) (height . 65) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (fullscreen . maximized) (z-group) (visibility . t) (display-type . color) (background-mode . dark) (cursor-color . "#92c48f") (environment) (powerline-cache) (frameset--id . "7428-EAD2-F071-CC91") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "w32") (explicit-name) (tool-bar-position . top) (width . 214) (left + -13) (top + -13)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 11) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 124) (min-pixel-width . 300) (min-pixel-height-ignore . 93) (min-pixel-width-ignore . 165) (min-pixel-height-safe . 31) (min-pixel-width-safe . 60)) hc (pixel-width . 3240) (pixel-height . 1985) (total-width . 216) (total-height . 64) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 1634) (pixel-height . 1985) (total-width . 109) (total-height . 64) (normal-height . 1.0) (normal-width . 0.5033081285444234) (buffer "story.org" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 1) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 330) (start . 1))) (leaf (last . t) (pixel-width . 1606) (pixel-height . 1985) (total-width . 107) (total-height . 64) (normal-height . 1.0) (normal-width . 0.4966918714555766) (buffer "paper.org" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name "d:/msys64/home/admin/.emacs.d/elpa/helm-20200127.1826/TAGS")
+(setq tags-table-list '("d:/msys64/home/admin/.emacs.d/elpa/helm-20200127.1826/TAGS"))
+(setq search-ring '("use-"))
+(setq regexp-search-ring '("setcar" "pinyin" "helm-file" "inin" "linumjjjjjjj"))
+(setq register-alist '((113) (48 . "(add-hook 'text-mode-hook 'linum-mode)\n")))
+(setq file-name-history '("~/temp" "~/.emacs.d/init.el" "~/.emacs.d/elpa/helm-20200127.1826/" "~/temp" "~/temp/jjj" "~/temp" "~/temp/" "~/temp" "~/temp/" "~/temp" "~admin/" "~/" "d:/work/org/" "~/" "d:/work/‘±Ê‘¼Ç‘±¾/‘ÂÛ‘ÎÄ/papers/Quantifying Tourist Behavior Patterns by Travel.pdf" "d:/work/‘±Ê‘¼Ç‘±¾/‘ÂÛ‘ÎÄ/papers/‘ÖÐ‘¹ú‘Èë‘¾³‘ÂÃ‘ÓÎ‘Ðè‘Çó‘µ¯‘ÐÔ‘¹À‘Ëã_‘»ù‘ÓÚ‘Îó‘²î‘ÐÞ‘Õý‘Ä£‘ÐÍ_‘ÌÆ‘½à‘³¾.pdf" "d:/work/‘±Ê‘¼Ç‘±¾/‘ÂÛ‘ÎÄ/papers/Effects_of_fenbendazole_and_vitamin_E_succinate_on.pdf" "d:/work/org/example.org"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "d:/work/org/story.org"
+  "story.org"
+  'org-mode
+  '(flyspell-mode autopair-mode company-mode linum-mode org-indent-mode)
+  330
+  '(330 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24141 252 5061 0) (buffer-file-coding-system . utf-8-dos) (overwrite-mode) (truncate-lines))
+  '((mark-ring (330 331 290 62 56))))
+
+(desktop-create-buffer 208
+  "d:/work/org/paper.org"
+  "paper.org"
+  'org-mode
+  '(flyspell-mode autopair-mode company-mode linum-mode org-indent-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24141 252 5061 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (1))))
+
+(desktop-create-buffer 208
+  nil
+  "org"
+  'dired-mode
+  '(company-mode)
+  541
+  '(319 nil)
+  t
+  '("d:/work/org/")
+  '((buffer-display-time 24141 65 821885 0) (overwrite-mode))
+  '((mark-ring (262))))
+
+(desktop-create-buffer 208
+  nil
+  "work"
+  'dired-mode
+  '(company-mode)
+  265
+  '(nil nil)
+  t
+  '("d:/work/")
+  '((buffer-display-time 24141 60 522252 0) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "d:/msys64/home/admin/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(eldoc-mode rainbow-delimiters-mode autopair-mode company-mode linum-mode)
+  5664
+  '(5664 nil)
+  nil
+  nil
+  '((buffer-display-time 24141 60 839624 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring (5664 5535 5452 10542 10542 10542 10459 9657 9427 1))))
+
+(desktop-create-buffer 208
+  "d:/work/org/example.org"
+  "example.org"
+  'org-mode
+  '(flyspell-mode autopair-mode company-mode linum-mode org-indent-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24140 64492 120237 0) (buffer-file-coding-system . utf-8-dos) (overwrite-mode) (truncate-lines))
+  '((mark-ring (1))))
+
+(desktop-create-buffer 208
+  nil
+  "elpa"
+  'dired-mode
+  '(company-mode)
+  598
+  '(nil nil)
+  t
+  '("d:/msys64/home/admin/.emacs.d/elpa/")
+  '((buffer-display-time 24141 230 22340 0) (overwrite-mode))
+  '((mark-ring nil)))
+

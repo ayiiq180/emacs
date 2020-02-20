@@ -1,0 +1,212 @@
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(require 'package)
+(package-initialize)
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/rc/")
+(require 'diffdir)
+;; 文件列表
+(package-install 'neotree)
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(add-to-list 'file-coding-system-alist '("\\.org" . utf-8))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(custom-enabled-themes (quote (wombat)))
+ '(package-selected-packages (quote (windresize helm-org pdf-tools company helm))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "spring green"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "navajo white"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "light slate blue"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "dark olive green"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "RoyalBlue3"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "DeepPink2")))))
+;;(set-default-font "Cascadia Code-11")
+;;  ;; 中文字体的设置，同时解决中英文字体宽度不一致的问题（org-mode的表格可以中英文对齐）。
+;;   ;; 而且解决了中文字体导致emacs卡的现象。这里有个问题，终端下会出错
+;;(if (window-system)  (dolist (charset '(kana han cjk-misc bopomofo))
+;;    (set-fontset-font (frame-parameter nil 'font) charset
+;;                      (font-spec :family "微软雅黑" :size 26))))
+;;20200131,因为几个机器上的放大不一致，导致字体设置出现的大小差异太大，所以都放在diffdir.el里面设置了,下面的部分是代码，这里不用
+;;---------------------------------
+;;;;中文与外文字体设置
+;;(defun set-font (english chinese english-size chinese-size)
+;;  (set-face-attribute 'default nil :font
+;;                      (format   "%s:pixelsize=%d"  english english-size))
+;;  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;    (set-fontset-font (frame-parameter nil 'font) charset
+;;                      (font-spec :family chinese :size chinese-size))))
+;;(set-font "Cascadia Code" "微软雅黑" 30 30)
+;;---------------------------------
+
+(if (window-system) (set-frame-width (selected-frame) 140))
+(if (window-system) (set-frame-height (selected-frame) 55))
+
+(global-set-key (kbd "C-x C-f") 'my-find-file)
+(define-key global-map "\C-cf" 'helm-find-files)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "\C-cm") 'helm-mini);;整合了buffer和最近文件的一个列表
+(global-set-key (kbd "\C-cr") 'helm-recentf);;用来列出最近打开过的文件列表
+(desktop-save-mode 1);;这里是为了保存emacs的工作状态，下次打开的时候自动打开上次的文件
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)));;这是为了让org-mode自动换行
+(setq org-log-done 'time);;add a timestamp when TODO changed
+(global-set-key (kbd "C-c a") 'org-agenda)
+;在执行程序的时候，不需要确认
+(setq org-confirm-babel-evaluate nil)
+
+;设定文档中需要执行的程序类型
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((emacs-lisp . t)
+        (C . t)
+        (java . t)
+        (js . t)
+        (ruby . t)
+        (ditaa . t)
+        (python . t)
+        (shell . t)
+        (latex . t)
+        (plantuml . t)
+        (R . t)))
+;;这里是用来在切换buffer的时候出现一个彩虹条防止看不到光标
+;;(load-file "d:/emacs-26.3/share/emacs/site-lisp/beacon.el")
+;;(beacon-mode 1)
+
+(defvar blink-cursor-colors (list  "#92c48f" "#6785c5" "#be369c" "#d9ca65")
+  "On each blink the cursor will cycle to the next color in this list.")
+
+;;实现每次闪烁光标变化颜色，因为直接设置光标颜色没效果
+(setq blink-cursor-count 0)
+(defun blink-cursor-timer-function ()
+  "Zarza wrote this cyberpunk variant of timer `blink-cursor-timer'. 
+Warning: overwrites original version in `frame.el'.
+
+This one changes the cursor color on each blink. Define colors in `blink-cursor-colors'."
+  (when (not (internal-show-cursor-p))
+    (when (>= blink-cursor-count (length blink-cursor-colors))
+      (setq blink-cursor-count 0))
+    (set-cursor-color (nth blink-cursor-count blink-cursor-colors))
+    (setq blink-cursor-count (+ 1 blink-cursor-count))
+    )
+  (internal-show-cursor nil (not (internal-show-cursor-p)))
+  )
+(add-to-list 'load-path "~/.emacs.d/lisp/evil")
+(require 'evil)
+(evil-mode 1)
+;;这里试图想搞定C-u直接把单词大写，但还弄不清楚evil的键绑定怎么写ESC,搞定了
+(evil-define-key 'insert 'global (kbd "C-u") (kbd "<escape>gUiwea"))
+(display-time-mode 1) ;; 常显
+(setq display-time-24hr-format t) ;;格式
+(setq display-time-day-and-date t) ;;显示时间、星期、日期
+(tool-bar-mode 0)
+;;(menu-bar-mode 0)
+(scroll-bar-mode 0)
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#380d31")
+(set-face-foreground 'highlight nil)
+(setq org-todo-keywords
+  '((sequence "TODO(t!)" "PENDING(p!)" "|" "DONE(d!)" "ABORT(a@/!)")
+))
+(setq org-todo-keyword-faces
+  '(("PENDING" .   (:background "red" :foreground "white" :weight bold))
+    ("TODO" .      (:background "DarkOrange" :foreground "black" :weight bold))
+    ("DONE" .      (:background "green" :foreground "black" :weight bold)) 
+    ("ABORT" .     (:background "gray" :foreground "black"))
+))
+;;(global-linum-mode 1);;显示行号,因为和pdf-view冲突，先关闭看看
+(setq linum-formart "%d| ")
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(setq markdown-command "pandoc")
+;;(setq shell-file-name (executable-find "bash.exe"))
+(setq org-default-notes-file (expand-file-name "~/.emacs.d/org/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/.emacs.d/org/gtd.org" "Tasks")
+         "* TODO %?\n %i\n %a")
+        ("j" "Journal" entry (file+datetree "~/.emacs.d/org/journal.org")
+         "* %?\nEntered on %U\n %i\n %a")))
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'text-mode-hook 'linum-mode)
+(add-hook 'org-mode-hook 'org-indent-mode)
+;;这里是为了能够在org-mode中对不同的字体修饰显示不同的颜色
+(setq org-emphasis-alist
+  '(("*" (bold :foreground "Orange" ))
+    ("/" italic)
+    ("_" underline)
+    ("=" (:background "maroon" :foreground "white"))
+    ("~" (:background "deep sky blue" :foreground "MidnightBlue"))
+    ("+" (:strike-through t :foreground "grey"))))
+(setq org-src-fontify-natively t)
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers
+(add-hook 'after-init-hook 'global-company-mode);;Completion will start automatically after you type a few letters. Use M-n and M-p to select, <return> to complete or <tab> to complete the common part. Search through the completions with C-s, C-r and C-o. Press M-(digit) to quickly complete with one of the first 10 candidates.
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(setq inhibit-compacting-font-caches t)
+(require 'powerline)
+(powerline-default-theme)
+;;为了限定org-mode里的图片预览的大小，暂时好像没作用
+(setq org-image-actual-width nil)
+;;拼写检查
+(dolist (hook '(text-mode-hook))
+      (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+      (add-hook hook (lambda () (flyspell-mode -1))))
+;; use apsell as ispell backend
+(setq-default ispell-program-name "aspell")
+;; use American English as ispell default dictionary
+(ispell-change-dictionary "american" t)
+;;拼写检查 end
+(pdf-tools-install)
+(setq explicit-shell-file-name "zsh")
+(setq make-backup-files nil)   ;;关闭自动备份
+;;helm-org
+(global-set-key (kbd "\C-ch") 'helm-org-in-buffer-headings);;org文件把heading列到buffer里
+(global-set-key (kbd "\C-cx") 'helm-org-agenda-files-headings);;org文件把agenda列表里的所有org的heading列到buffer里
+
+
+;;;windresize
+(require 'windresize)
+ (global-set-key (kbd "C-c s") 'windresize)
+
+
+;;;Winner-mode
+;;可以使用 Ctrl-c ← （就是向左的箭头键）组合键，退回你的上一个窗口设置。）
+;;可以使用 Ctrl-c → （前进一个窗口设置。）
+(when (fboundp 'winner-mode) 
+  (winner-mode) 
+  (windmove-default-keybindings)) 
+
+;;;windmove-mode
+(when (fboundp 'windmove-default-keybindings)
+      (windmove-default-keybindings)
+    (global-set-key (kbd "C-c j")  'windmove-down)
+    (global-set-key (kbd "C-c l") 'windmove-right)
+    (global-set-key (kbd "C-c h")    'windmove-left)
+    (global-set-key (kbd "C-c k")  'windmove-up))
+
