@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name:org head option 
+# key:head 
+# --
+#+TITLE: $1 
+#+STARTUP: showall 
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="images/style.css" />
+#+OPTIONS: toc:t ^:nil _:nil num:t author:nil
+#+LATEX_HEADER: \usepackage[UTF8]{ctex}
+#+LATEX_HEADER: \author{ayiiq180}
+#+LATEX_HEADER: \hypersetup{hidelinks} 
+#+LATEX_HEADER: \tolerance=1000 
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+#+EXPORT_FILE_NAME: exports/$2
+#+LANGUAGE: zh-CN 
+
