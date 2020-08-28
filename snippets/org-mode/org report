@@ -1,8 +1,10 @@
 # -*- mode: snippet -*-
-# name:org head option 
-# key:head 
+# name: org report 
+# key: orp
 # --
 #+TITLE: $1 
+#+DATE: \today
+#+AUTHOR: 白刚
 #+STARTUP: showall 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="images/style.css" />
 #+OPTIONS: toc:t ^:nil _:nil num:t author:nil arch:t p:t
@@ -15,4 +17,19 @@
 #+LATEX_HEADER: \geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
 #+EXPORT_FILE_NAME: exports/$2
 #+LANGUAGE: zh-CN 
+#+begin_src emacs-lisp :exports results :results none :eval export
+  (make-variable-buffer-local 'org-latex-title-command)
+  (setq org-latex-title-command (concat
+     "\\begin{titlepage}\n"
+     "\\centering\n"
+     "{\\includegraphics[scale=0.6]{logo.png} \\par }\n"
+     "\\vspace{3cm}\n"
+     "{\\Huge %t \\par }\n"
+     "\\vspace{1cm}\n"
+     "{\\LARGE %a \\par}\n"
+     "\\vspace{1cm}\n"
+     "{\\large %D \\par}\n"
+     "\\end{titlepage}\n"))
+#+end_src
+\newpage
 

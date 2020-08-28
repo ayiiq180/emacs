@@ -187,8 +187,8 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 ;; (setq org-latex-pdf-process '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 ;;                               "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 ;; 如果要用minted实现代码pdf高亮，就要用参数-shell-escape
-(setq org-latex-pdf-process '("xelatex -interaction nonstopmode -output-directory %o %f"
-                              "xelatex -interaction nonstopmode -output-directory %o %f"))
+(setq org-latex-pdf-process '("xelatex -interaction nonstopmode -8bit -output-directory %o %f"
+                              "xelatex -interaction nonstopmode -8bit -output-directory %o %f"))
 ;; org-mode设置
 ;;这里是用来在切换buffer的时候出现一个彩虹条防止看不到光标
 ;;(load-file "d:/emacs-26.3/share/emacs/site-lisp/beacon.el")
@@ -264,6 +264,16 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 ;; 延迟加载
 (with-eval-after-load 'dired
     (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+;; 切换buffer后，立即刷新
+(defadvice switch-to-buffer (after revert-buffer-now activate)
+  (if (eq major-mode 'dired-mode)
+      (revert-buffer)))
+
+;; 执行shell-command后，立即刷新
+(defadvice shell-command (after revert-buffer-now activate)
+  (if (eq major-mode 'dired-mode)
+      (revert-buffer)))
+
 ;; ====================
 
 ;; insert date and time
@@ -293,8 +303,8 @@ Uses `current-date-time-format' for the formatting the date/time."
 ;       (insert "\n")
        )
 
-(global-set-key "\C-c\C-d" 'insert-current-date-time)
-(global-set-key "\C-c\C-t" 'insert-current-time)
+(global-set-key (kbd "C-c d") 'insert-current-date-time)
+(global-set-key (kbd "C-c t") 'insert-current-time)
 ;; insert date and time 
 
 ;;拼写检查
@@ -307,7 +317,7 @@ Uses `current-date-time-format' for the formatting the date/time."
 ;; use American English as ispell default dictionary
 (ispell-change-dictionary "american" t)
 ;;拼写检查 end
-(pdf-tools-install)
+;(pdf-tools-install)
 (setq explicit-shell-file-name "zsh")
 
 ;; yas设置
@@ -317,3 +327,23 @@ Uses `current-date-time-format' for the formatting the date/time."
     ))
 (yas-global-mode 1)
 ;; yas设置
+;;org-mode beamer
+
+(require 'ox-beamer)
+(require 'ox-latex)
+(add-to-list 'org-latex-classes
+             '("beamer"
+               "\\documentclass\[presentation\]\{beamer\}"
+               ("\\section\{%s\}" . "\\section*\{%s\}")
+               ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
+               ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
+;; export code as listings
+(setq org-latex-listings t)
+(add-to-list 'org-latex-packages-alist '("" "listings"))
+(add-to-list 'org-latex-packages-alist '("" "color"))
+(setq org-latex-listings-options
+        '(("frame" "lines")
+          ("numbers" "left")
+          ("numberstyle" "\\tiny")))
+;;----------
+

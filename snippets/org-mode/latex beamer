@@ -1,0 +1,40 @@
+# key: bea
+# name: latex beamer
+# --
+#+TITLE:     $1 
+#+AUTHOR:    BaiGang
+#+EMAIL:     249709319@qq.com
+#+DATE:      $2
+#+DESCRIPTION:$3
+#+KEYWORDS:
+#+LANGUAGE:  zh-CN
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+startup: beamer
+#+LATEX_CLASS: beamer
+#+LATEX_HEADER: \usetheme{CambridgeUS} %theme
+#+LATEX_HEADER: \usecolortheme[named=FireBrick]{structure}
+#+LATEX_HEADER: \institute{桂林旅游学院}
+#+LATEX_HEADER: \pgfdeclareimage[height=1.0cm, width=1.0cm]{logo}{logos.png}
+#+LATEX_HEADER: \logo{\pgfuseimage{logo}}
+#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Topic}\tableofcontents[currentsection]\end{frame}}
+#+LaTeX_CLASS_OPTIONS: [xcolor=svgnames,samller,presentation,aspectratio=169]
+#+LATEX_HEADER:\setbeamercovered{transparent}
+#+LATEX_HEADER:\setbeamertemplate{caption}[numbered]
+#+LATEX_HEADER:\setbeamertemplate{blocks}[rounded][shadow=true]
+#+LATEX_HEADER:\usepackage{tikz} \usepackage[UTF8]{ctex} \usepackage{amsmath}
+#+LATEX_HEADER:\setmainfont{Times New Roman}\setCJKmainfont[BoldFont={Microsoft YaHei},ItalicFont={Microsoft YaHei}]{Microsoft YaHei}\setCJKsansfont{Microsoft YaHei}\setCJKmonofont{Microsoft YaHei}
+#+LATEX_HEADER:\usepackage{verbatim}
+# 以下三行是用来全局设置verbatim的字体大小 
+#+LATEX_HEADER:\makeatletter
+#+LATEX_HEADER:\def\verbatim@font{\scriptsize}
+#+LATEX_HEADER:\makeatother
+#+LATEX_HEADER:\graphicspath{{figures/}} \definecolor{lstbgcolor}{rgb}{0.9,0.9,0.9}
+#+LATEX_HEADER:\usepackage{listings} \usepackage{fancyvrb} \usepackage{xcolor}
+#+LATEX_HEADER:\lstset{numbers=left,numberstyle=\tiny,xleftmargin=2em,xrightmargin=2em, aboveskip=1em,escapeinside=`',frameround=ftft,language=python,keywordstyle={\color{blue!70}\fontspec{Consolas Bold}},basicstyle=\footnotesize\fontspec{Consolas},commentstyle={\color{red!50!green!50!blue!50}\fontspec{Consolas Italic}},backgroundcolor=\color{grey!20},rulesepcolor=\color{red!20!green!20!blue!20},breaklines,columns=flexible,showstringspaces=false}
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+#+latex_header: \usetikzlibrary{positioning, shapes.geometric}
+#+EXPORT_FILE_NAME: exports/$4
